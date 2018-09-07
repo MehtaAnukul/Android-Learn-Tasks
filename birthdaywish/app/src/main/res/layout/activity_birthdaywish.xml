@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".BirthdaywishActivity">
+<LinearLayout
+    android:id="@+id/activity_birthdaywish_linearlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="2">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_weight="1"
+        android:src="@drawable/birthday" />
+
+    <TextView
+        android:id="@+id/activity_birthdaywish_wishmsg_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorblack"
+        android:fontFamily="casual"
+        android:text="@string/wish_msg"
+        android:textColor="@color/colorRed"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+
+</LinearLayout>
+    <EditText
+        android:id="@+id/activity_birthdaywish_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:textAlignment="center"
+        android:layout_below="@id/activity_birthdaywish_linearlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+<LinearLayout
+    android:id="@+id/activity_birthdaywish_btnlinearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@id/activity_birthdaywish_et"
+    android:weightSum="3">
+
+
+    <Button
+        android:id="@+id/activity_birthdaywish_txtcolorbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/activity_birthdaywish_et"
+        android:background="@color/colorOrange"
+        android:textStyle="bold"
+        android:textColor="@color/colorGreen"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/textcolorbtn"/>
+    <Button
+        android:id="@+id/activity_birthdaywish_clickbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/activity_birthdaywish_et"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorblue"
+        android:textStyle="bold"
+        android:textColor="@color/colorGreen"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/clickbtn"/>
+    <Button
+        android:id="@+id/activity_birthdaywish_bgtxtcolorbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/activity_birthdaywish_et"
+        android:background="@color/colorOrange"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorGreen"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/bgtextcolorbtn"/>
+</LinearLayout>
+
+</RelativeLayout>
+
+
+</ScrollView>

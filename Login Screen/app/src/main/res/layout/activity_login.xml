@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/bg_gradient_start">
+<LinearLayout
+    android:id="@+id/activity_login_main_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/activity_login_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/activity_login_id_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:hint="@string/id"
+            android:textAlignment="center"
+            android:layout_below="@id/activity_login_tv"
+            android:background="@color/white"
+            android:layout_centerInParent="true"/>
+        <EditText
+            android:id="@+id/activity_login_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:background="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/activity_login_id_et"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/activity_login_loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loginbtn"
+        android:textColor="@color/white"
+        android:layout_below="@id/activity_login_password_et"
+        android:layout_marginTop="30dp"
+        android:background="@color/bg_gradient_end"/>
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_login_signup_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signUp"
+        android:textColor="@color/white"
+        android:layout_below="@id/activity_login_main_linearlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+</RelativeLayout>

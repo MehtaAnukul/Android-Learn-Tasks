@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="welcome">ようこそ</string>
+    <string name="id">電子メールアドレス</string>
+    <string name="password">パスワード</string>
+    <string name="loginbtn">ログイン</string>
+    <string name="signUp" msgid="15960710549009350">アカウントを持っていない？サインアップ</string>
+</resources>

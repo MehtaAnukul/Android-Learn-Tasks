@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="welcome">Bienvenue</string>
+    <string name="id">Adresse e-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="loginbtn">"S'identifier"</string>
+    <string name="signUp">"Vous n'avez pas de compte? S'inscrire"</string>
+</resources>

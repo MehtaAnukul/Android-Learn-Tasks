@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Birthdaywish</string>
+    <string name="wish_msg">Hey Mimoh May all your dreams and wishes come true. ...
+Hope your special day, brings you all that your heart desires! ...
+Wishing you a day that is as special in every way as you are! ...
+I hope all your birthday wishes and dreams come true.and Happy wala Birthday Mimoh..</string>
+    <string name="name">Enter name</string>
+    <string name="clickbtn">Click</string>
+    <string name="textcolorbtn">textcolor</string>
+    <string name="bgtextcolorbtn">Bgtextcolor</string>
+</resources>

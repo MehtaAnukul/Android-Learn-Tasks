@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_fontstyle_relative"
+    tools:context=".FontStyleActivity">
+
+    <TextView
+        android:id="@+id/activity_sample_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anukul"
+        android:textSize="10sp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/activity_increase_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorblack"
+        android:layout_below="@+id/activity_sample_tv"/>
+
+    <Button
+        android:id="@+id/activity_decrease_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/colorblack"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/activity_sample_tv"/>
+
+    <TextView
+        android:id="@+id/activity_fontstyle_parentbg_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To change Parent background"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:id="@+id/activity_fontstyle_parantbg_linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_below="@id/activity_fontstyle_parentbg_tv">
+
+        <Button
+            android:id="@+id/activity_fontstyle_parentbg_redbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorRed"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/activity_fontstyle_parentbg_tv"/>
+        <Button
+            android:id="@+id/activity_fontstyle_parentbg_bluebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorblue"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/activity_fontstyle_parentbg_tv"
+            android:layout_toRightOf="@id/activity_fontstyle_parentbg_redbtn" />
+        <Button
+            android:id="@+id/activity_fontstyle_parentbg_yellowbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorYellow"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/activity_fontstyle_parentbg_bluebtn"
+            android:layout_below="@id/activity_fontstyle_parentbg_tv" />
+        <Button
+            android:id="@+id/activity_fontstyle_parentbg_greenbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorGreen"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/activity_fontstyle_parentbg_tv"
+            android:layout_toRightOf="@id/activity_fontstyle_parentbg_yellowbtn" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_fontstyle_sample_textcolor_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To change the textColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/activity_fontstyle_parantbg_linearlayout"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:id="@+id/activity_fontstyle_txtcolor_linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_below="@id/activity_fontstyle_sample_textcolor_tv">
+
+        <Button
+            android:id="@+id/activity_fontstyle_txtcolor_redbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorRed"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/activity_fontstyle_sample_textcolor_tv"/>
+        <Button
+            android:id="@+id/activity_fontstyle_txtcolor_bluebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorblue"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/activity_fontstyle_sample_textcolor_tv"
+            android:layout_toRightOf="@id/activity_fontstyle_txtcolor_redbtn"/>
+        <Button
+            android:id="@+id/activity_fontstyle_txtcolor_yellowbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorYellow"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/activity_fontstyle_txtcolor_bluebtn"
+            android:layout_below="@id/activity_fontstyle_sample_textcolor_tv" />
+        <Button
+            android:id="@+id/activity_fontstyle_txtcolor_greenbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorGreen"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/activity_fontstyle_sample_textcolor_tv"
+            android:layout_toRightOf="@id/activity_fontstyle_txtcolor_yellowbtn" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_fontstyle_sample_bgtextcolor_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To change the BGtextColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/activity_fontstyle_txtcolor_linearlayout"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:id="@+id/activity_fontstyle_bgtxtcolor_linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_below="@id/activity_fontstyle_sample_bgtextcolor_tv">
+
+        <Button
+            android:id="@+id/activity_fontstyle_bgtxtcolor_redbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorRed"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/activity_fontstyle_sample_bgtextcolor_tv"/>
+        <Button
+            android:id="@+id/activity_fontstyle_bgtxtcolor_bluebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorblue"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/activity_fontstyle_sample_bgtextcolor_tv"
+            android:layout_toRightOf="@id/activity_fontstyle_bgtxtcolor_redbtn"/>
+        <Button
+            android:id="@+id/activity_fontstyle_bgtxtcolor_yellowbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorYellow"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/activity_fontstyle_bgtxtcolor_bluebtn"
+            android:layout_below="@id/activity_fontstyle_sample_bgtextcolor_tv" />
+        <Button
+            android:id="@+id/activity_fontstyle_bgtxtcolor_greenbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorGreen"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/activity_fontstyle_sample_bgtextcolor_tv"
+            android:layout_toRightOf="@id/activity_fontstyle_bgtxtcolor_yellowbtn" />
+    </LinearLayout>
+
+</RelativeLayout>

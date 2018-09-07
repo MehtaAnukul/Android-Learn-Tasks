@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="welcome">स्वागत हे</string>
+    <string name="id">ईमेल पता</string>
+    <string name="password">पारण शब्द</string>
+    <string name="loginbtn">लॉग इन करें</string>
+    <string name="signUp" msgid="15960710549009350">खाता नहीं है? साइन अप करें</string>
+
+</resources>
