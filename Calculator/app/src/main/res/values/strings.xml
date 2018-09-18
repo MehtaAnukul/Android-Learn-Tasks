@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calculatormini</string>
+    <string name="answer">answer</string>
+    <string name="operator">operator</string>
+    <string name="valueOne">valueOne</string>
+    <string name="valueTwo">valueTwo</string>
+</resources>
