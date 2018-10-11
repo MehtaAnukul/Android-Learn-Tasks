@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UTUS</string>
+    <string name="UTUSGAME">UTUS GAME</string>
+    <string name="Score">SCORE</string>
+    <string name="Lives">Lives</string>
+    <string name="start">START</string>
+</resources>
