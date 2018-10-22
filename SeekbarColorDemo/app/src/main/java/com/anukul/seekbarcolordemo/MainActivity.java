@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
 
     int colorCode;
+
     private TextView colorCodeTv;
 
     private SeekBar colorRedSk;
@@ -19,7 +20,10 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     private SeekBar colorBlueSk;
     private SeekBar colorAlphaSk;
     private RelativeLayout colorPreview;
-
+    private int red = 0;
+    private int green = 0;
+    private int blue = 0;
+    private int alpha = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,29 +52,26 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         switch (seekBar.getId()) {
             case R.id.activity_main_seekbarRed:
                 Toast.makeText(this, "Red", Toast.LENGTH_SHORT).show();
-                int redColor = Color.argb(255, progress, 0, 0);
-                colorPreview.setBackgroundColor(redColor);
-                colorCodeTv.setText(String.valueOf(redColor));
+                red = progress;
                 break;
             case R.id.activity_main_seekbarGreen:
                 Toast.makeText(this, "GREEN", Toast.LENGTH_SHORT).show();
-                 int greenColor = Color.argb(255,0,progress,0);
-                 colorPreview.setBackgroundColor(greenColor);
-                colorCodeTv.setText(String.valueOf(greenColor));
+                green = progress;
                 break;
             case R.id.activity_main_seekbarBlue:
-                Toast.makeText(this,"Blue",Toast.LENGTH_SHORT).show();
-                int blueColor = Color.argb(255,0,0,progress);
-                colorPreview.setBackgroundColor(blueColor);
-                colorCodeTv.setText(String.valueOf(blueColor));
+                Toast.makeText(this, "Blue", Toast.LENGTH_SHORT).show();
+                blue = progress;
                 break;
             case R.id.activity_main_seekbarAlpha:
-                Toast.makeText(this,"Alpha",Toast.LENGTH_SHORT).show();
-                int alphaColor = Color.argb(progress,0,0,0);
-                colorPreview.setBackgroundColor(alphaColor);
-                colorCodeTv.setText(String.valueOf(alphaColor));
+                Toast.makeText(this, "Alpha", Toast.LENGTH_SHORT).show();
+                alpha = progress;
                 break;
         }
+
+        colorPreview.setBackgroundColor(Color.argb(alpha, red, green, blue));
+        colorCodeTv.setText(String.valueOf("#"+String.format("%02x", red)
+                +String.format("%02x", green)+String.format("%02x", blue)+String.format("%02x", alpha)));
+
     }
 
     @Override
