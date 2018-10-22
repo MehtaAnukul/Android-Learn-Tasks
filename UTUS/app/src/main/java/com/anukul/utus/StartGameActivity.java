@@ -126,6 +126,7 @@ public class StartGameActivity extends AppCompatActivity implements View.OnClick
         TextView decreaselive = (TextView) findViewById(R.id.activity_play_livesTv);
         decreaselive.setText(live + "");
         if (live == 0) {
+            Toast.makeText(StartGameActivity.this,"Game Over",Toast.LENGTH_LONG).show();
             finish();
         }
     }
@@ -140,8 +141,8 @@ public class StartGameActivity extends AppCompatActivity implements View.OnClick
         randome = rnd.nextInt(btn.length);
         randomBtnColor = btn[randome];
         Log.e(TAG, randome + " NUM");
-        //  bt.setBackgroundColor(Color.argb(255,rnd.nextInt(256),rnd.nextInt(256),rnd.nextInt(256)));
-        randomBtnColor.setBackgroundColor(Color.GREEN);
+        randomBtnColor.setBackgroundColor(Color.argb(255,rnd.nextInt(256),rnd.nextInt(256),rnd.nextInt(256)));
+        //randomBtnColor.setBackgroundColor(Color.GREEN);
     }
 
     private void btnColor() {

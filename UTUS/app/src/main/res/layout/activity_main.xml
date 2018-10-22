@@ -5,25 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FrontPagePlayActivity"
-    android:background="@color/colorBlack">
+    android:background="@drawable/utusss">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/activity_main_playBtn"
+        android:layout_marginStart="15dp"
+        android:background="@color/colorBlack"
         android:text="@string/UTUSGAME"
-        android:textColor="@color/colorWhite"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:textSize="24sp"/>
+        android:textColor="@color/colorRed"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
     <Button
         android:id="@+id/activity_main_playBtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Play"
-        android:textSize="20dp"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="188dp"
+        android:layout_marginEnd="16dp"
         android:background="@color/colorBlack"
-        android:textColor="@color/colorWhite" />
+        android:text="Play"
+        android:textColor="@color/colorRed"
+        android:textSize="20dp"
+        android:textStyle="italic" />
 
 
 
