@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -18,7 +19,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, RadioGroup.OnCheckedChangeListener {
     float textsize;
-
     private ImageView imageIv;
     private TextView captionTv;
     private RadioGroup radioGroup;
@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     private SeekBar widthSb;
     private SeekBar heightSb;
     private SeekBar captionTextSizeSb;
-    private TextView captionTextSizeTv;
+   // private TextView captionTextSizeTv;
+    private RelativeLayout hideRelativelayout;
     private Property<View, Float> scaleY;
 
     @Override
@@ -46,7 +47,9 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         heightSb = findViewById(R.id.activity_main_height_sk);
         selectOptionRb = findViewById(radioGroup.getCheckedRadioButtonId());
         captionTextSizeSb = findViewById(R.id.activity_main_caption_sk);
-        captionTextSizeTv = findViewById(R.id.activity_main_captionTextSizeTv);
+       // captionTextSizeTv = findViewById(R.id.activity_main_captionTextSizeTv);
+        hideRelativelayout = findViewById(R.id.activity_main_hide_relativelayout);
+
         radioGroup.setOnCheckedChangeListener(this);
         widthSb.setOnSeekBarChangeListener(this);
         heightSb.setOnSeekBarChangeListener(this);
@@ -57,6 +60,12 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             imageIv.getLayoutParams().width = widthSb.getProgress();
             imageIv.getLayoutParams().height = heightSb.getProgress();
             imageIv.setScaleType(ImageView.ScaleType.FIT_XY);
+        }
+        if(selectOptionRb.getText().equals(getString(R.string.caption))){
+            captionTv.requestLayout();
+            captionTv.getLayoutParams().width = captionTextSizeSb.getProgress();
+            captionTv.getLayoutParams().height = captionTextSizeSb.getProgress();
+
         }
     }
 
@@ -94,7 +103,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             imageIv.requestLayout();
             imageIv.getLayoutParams().height = progres;
             imageIv.setScaleType(ImageView.ScaleType.FIT_XY);
-
             Toast.makeText(this, "Change img Height", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Error Occur", Toast.LENGTH_SHORT).show();
@@ -115,8 +123,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             imageIv.requestLayout();
             imageIv.getLayoutParams().width = progres;
             imageIv.setScaleType(ImageView.ScaleType.FIT_XY);
-
-
             Toast.makeText(this, "Change img width", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Error Occur", Toast.LENGTH_SHORT).show();
@@ -140,12 +146,14 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         selectOptionRb = findViewById(checkedId);
         switch (checkedId) {
             case R.id.activity_main_captionRb:
-                captionTextSizeSb.setVisibility(View.VISIBLE);
-                captionTextSizeTv.setVisibility(View.VISIBLE);
+                hideRelativelayout.setVisibility(View.VISIBLE);
+               // captionTextSizeSb.setVisibility(View.VISIBLE);
+                //captionTextSizeTv.setVisibility(View.VISIBLE);
                 break;
             case R.id.activity_main_imgRb:
-                captionTextSizeSb.setVisibility(View.INVISIBLE);
-                captionTextSizeTv.setVisibility(View.INVISIBLE);
+                hideRelativelayout.setVisibility(View.INVISIBLE);
+               // captionTextSizeSb.setVisibility(View.INVISIBLE);
+               // captionTextSizeTv.setVisibility(View.INVISIBLE);
                 break;
         }
 

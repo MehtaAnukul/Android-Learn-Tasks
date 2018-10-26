@@ -3,40 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/orangelight">
 
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:context=".MainActivity">
-
-        <ImageView
-
-            android:id="@+id/activity_main_imgView"
+        <RelativeLayout
+            android:id="@+id/activity_main_imgCaption_relativelayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/afghanistan" />
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:id="@+id/activity_main_imgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/afghanistan" />
 
-        <TextView
-            android:id="@+id/activity_main_captionTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/activity_main_imgView"
-            android:layout_centerHorizontal="true"
-            android:textAlignment="center"
-            android:background="@color/colorAccent"
-            android:layout_marginTop="10dp"
-            android:text="Afghanistan"
-            android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/activity_main_captionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_main_imgView"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:background="@color/afghanistanColorPrimary"
+                android:layout_marginTop="10dp"
+                android:text="Afghanistan"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
 
         <RadioGroup
             android:id="@+id/activity_main_radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/activity_main_captionTv"
+            android:layout_below="@id/activity_main_imgCaption_relativelayout"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
@@ -60,6 +68,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="@string/width"
+          android:textStyle="bold"
           android:layout_margin="10dp"
           android:layout_marginTop="10dp"
           android:layout_below="@id/activity_main_radioGroup"/>
@@ -79,7 +88,8 @@
             android:layout_margin="10dp"
             android:layout_marginTop="10dp"
             android:layout_below="@id/activity_main_width_sk"
-            android:text="@string/Height"/>
+            android:text="@string/Height"
+            android:textStyle="bold"/>
         <SeekBar
             android:id="@+id/activity_main_height_sk"
             android:layout_width="match_parent"
@@ -89,25 +99,32 @@
             android:max="255"
             android:progress="50" />
 
-        <TextView
-            android:id="@+id/activity_main_captionTextSizeTv"
+        <RelativeLayout
+            android:id="@+id/activity_main_hide_relativelayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/CaptionTextSize"
-            android:layout_margin="10dp"
-            android:layout_marginTop="10dp"
-            android:visibility="invisible"
             android:layout_below="@id/activity_main_height_sk"
-            />
-        <SeekBar
-            android:id="@+id/activity_main_caption_sk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/activity_main_captionTextSizeTv"
-            android:layout_margin="10dp"
-            android:max="255"
-            android:visibility="invisible"
-            android:progress="50" />
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/activity_main_captionTextSizeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/CaptionTextSize"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"/>
+            <SeekBar
+                android:id="@+id/activity_main_caption_sk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_main_captionTextSizeTv"
+                android:layout_margin="10dp"
+                android:max="255"
+                android:progress="50" />
+
+        </RelativeLayout>
+
 
     </RelativeLayout>
 </ScrollView>

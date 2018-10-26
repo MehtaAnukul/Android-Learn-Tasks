@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="afghanistanColorPrimary">#ff8a65</color>
+    <color name="afghanistanColorPrimaryDark">#f56803</color>
+    <color name="afghanistanColorAccent">#fc5521</color>
+
+    <color name="orangelight">#f5c696</color>
+
 </resources>
