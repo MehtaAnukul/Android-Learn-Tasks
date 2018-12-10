@@ -29,7 +29,7 @@ public class FontStyleActivity extends AppCompatActivity {
 
     private Button bgtxtRedBtn;
     private Button bgtxtBlueBtn;
-    private Button   bgtxtYellowBtn;
+    private Button bgtxtYellowBtn;
     private Button bgtxtGreenBtn;
 
     @Override

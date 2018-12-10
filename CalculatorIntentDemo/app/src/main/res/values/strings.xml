@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CalculatorIntentDemo</string>
+    <string name="valueOne">ValueOne</string>
+    <string name="operator">Operator</string>
+    <string name="valueSecond">valueSecond</string>
+    <string name="answer">Answer</string>
+</resources>

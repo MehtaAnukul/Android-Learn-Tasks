@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calulatorminiAnswerActivity"
+    android:background="@color/colorlight">
+
+    <LinearLayout
+        android:id="@+id/activity_calculatormini_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="50dp">
+
+        <EditText
+            android:id="@+id/activity_calculatormini_valueOneEd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/valueOne"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/activity_calculatormini_operatorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textAlignment="center"
+            android:hint="@string/operator"/>
+        <EditText
+            android:id="@+id/activity_calculatormini_valueSecondTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/valueSecond"/>
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/activity_calculatormini_addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+" />
+        <Button
+            android:id="@+id/activity_calculatormini_subBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_toEndOf="@id/activity_calculatormini_addBtn"/>
+        <Button
+            android:id="@+id/activity_calculatormini_mulBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_below="@id/activity_calculatormini_addBtn"/>
+        <Button
+            android:id="@+id/activity_calculatormini_divBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:layout_below="@id/activity_calculatormini_subBtn"
+            android:layout_toEndOf="@id/activity_calculatormini_mulBtn"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
