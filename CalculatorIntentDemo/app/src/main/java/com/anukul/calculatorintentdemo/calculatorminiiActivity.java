@@ -47,38 +47,42 @@ public class calculatorminiiActivity extends AppCompatActivity implements View.O
 
     @Override
     public void onClick(View v) {
+
+
         final int value1 = Integer.parseInt(valueOneEd.getText().toString().trim());
         final int value2 = Integer.parseInt(valueSecondEd.getText().toString().trim());
 
-        int result;
 
         switch (v.getId()){
             case R.id.activity_calculatormini_addBtn:
-                result = value1 + value2;
-                opreatorTv.setText(addBtn.getText().toString());
-                gotoSecondActivity(result);
+                //result = value1 + value2;
+              opreatorTv.setText(addBtn.getText().toString());
+                gotoSecondActivity(value1,value2,1);
                 break;
             case R.id.activity_calculatormini_subBtn:
-                result = value1 - value2;
-                opreatorTv.setText(addBtn.getText().toString());
-                gotoSecondActivity(result);
+                //result = value1 - value2;
+                opreatorTv.setText(subBtn.getText().toString());
+                gotoSecondActivity(value1,value2,2);
                 break;
             case R.id.activity_calculatormini_mulBtn:
-                result = value1 * value2;
-                opreatorTv.setText(addBtn.getText().toString());
-                gotoSecondActivity(result);
+                //result = value1 * value2;
+                opreatorTv.setText(mulBtn.getText().toString());
+                gotoSecondActivity(value1,value2,3);
                 break;
             case R.id.activity_calculatormini_divBtn:
-                result = value1 / value2;
-                opreatorTv.setText(addBtn.getText().toString());
-                gotoSecondActivity(result);
+                //result = value1 / value2;
+                opreatorTv.setText(divBtn.getText().toString());
+                gotoSecondActivity(value1,value2,4);
                 break;
         }
     }
 
-    private void gotoSecondActivity(int result) {
+    private void gotoSecondActivity(int value1,int value2,int operatorCode) {
         final Intent gotosecondActivity = new Intent(calculatorminiiActivity.this,calulatorminiAnswerActivity.class);
-        gotosecondActivity.putExtra("KEY_ANSWER",result);
+       // gotosecondActivity.putExtra("KEY_ANSWER",result);
+        gotosecondActivity.putExtra("KEY_VALUEONE",value1);
+        gotosecondActivity.putExtra("KEY_OPERATOR",operatorCode);
+        gotosecondActivity.putExtra("KEY_VALUESEC",value2);
         startActivity(gotosecondActivity);
     }
 }
