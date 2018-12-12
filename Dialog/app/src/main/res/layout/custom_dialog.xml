@@ -10,12 +10,13 @@
         android:layout_height="wrap_content"
         android:background="@drawable/android"
         android:layout_marginBottom="300dp"/>
+
     <Button
         android:id="@+id/activity_customDialog_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:text="@string/button" />
 
 
 </RelativeLayout>
