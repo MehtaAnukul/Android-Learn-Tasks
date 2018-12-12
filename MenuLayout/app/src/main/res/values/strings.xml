@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MenuLayout</string>
+    <string name="newGroup">New group</string>
+    <string name="newBroadcast">New broadcast</string>
+    <string name="whatsAppWeb">WhatsApp Web</string>
+    <string name="starredMsg">Starred Message</string>
+    <string name="setting">Setting</string>
+    <string name="contextBtn">Context Manu</string>
+    <string name="popUpBtn">PopUp Manu</string>
+</resources>
