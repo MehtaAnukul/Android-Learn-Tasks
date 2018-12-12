@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".DialogActivity"
+    android:gravity="center"
+    android:layout_centerInParent="true">
+
+
+    <Button
+        android:id="@+id/activity_dialog_alertBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alertBtn"/>
+
+    <Button
+        android:id="@+id/activity_dialog_timepickerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_dialog_alertBtn"
+        android:text="@string/timePickerBtn"/>
+
+    <Button
+        android:id="@+id/activity_dialog_customDialogBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_dialog_timepickerBtn"
+        android:text="@string/customDialogBtn"/>
+
+    <Button
+        android:id="@+id/activity_dialog_colorPickerDialogBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/OpenColordialog"
+        android:layout_below="@id/activity_dialog_customDialogBtn"/>
+</RelativeLayout>

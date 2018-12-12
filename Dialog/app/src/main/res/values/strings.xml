@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dialog</string>
+    <string name="button">Button</string>
+    <string name="alertBtn">AlertBtn</string>
+    <string name="timePickerBtn">TimePickerBtn</string>
+    <string name="customDialogBtn">CustomDialogBtn</string>
+    <string name="OpenColordialog">OpenColordialog</string>
+</resources>
