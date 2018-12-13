@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ListSpinnerAdapter</string>
+    <string name="Abc">Anukul</string>
+    <string name="city">Ahmedabad</string>
+
+    <string-array name="personNameArray">
+        <item>ABC</item>
+        <item>ASD</item>
+        <item>FGH</item>
+        <item>QWE</item>
+    </string-array>
+</resources>

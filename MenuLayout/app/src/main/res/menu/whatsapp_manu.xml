@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        app:showAsAction="always"
         android:id="@+id/whatsapp_manu_newGroup"
         android:icon="@drawable/group"
         android:title="@string/newGroup"
-        />
+        app:showAsAction="always" />
     <item
         android:id="@+id/whatsapp_manu_newBroadcast"
-        android:title="@string/newBroadcast"/>
+        android:title="@string/newBroadcast" />
     <item
         android:id="@+id/whatsapp_manu_whatsAppWeb"
-        android:title="@string/whatsAppWeb"/>
+        android:title="@string/whatsAppWeb" />
+
     <item
-        android:id="@+id/whatsapp_manu_starredMsg"
-        android:title="@string/starredMsg"/>
-    <item
-        android:id="@+id/whatsapp_manu_setting"
-        android:title="@string/setting"/>
+        android:id="@+id/file"
+        android:title="@string/setting">
+        <!-- "file" submenu -->
+        <menu>
+            <item
+                android:id="@+id/create_new"
+                android:icon="@drawable/group"
+                android:title="@string/account"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/open"
+                android:icon="@drawable/attachment"
+                android:title="@string/chats"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+
 </menu>

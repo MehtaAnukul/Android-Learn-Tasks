@@ -46,12 +46,12 @@ public class ManuActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.whatsapp_manu_whatsAppWeb:
                 Toast.makeText(this,"Whatsapp Web",Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.whatsapp_manu_starredMsg:
-                Toast.makeText(this,"starred msg",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.whatsapp_manu_setting:
-                Toast.makeText(this,"Setting",Toast.LENGTH_SHORT).show();
-                break;
+//            case R.id.whatsapp_manu_starredMsg:
+//                Toast.makeText(this,"starred msg",Toast.LENGTH_SHORT).show();
+//                break;
+//            case R.id.whatsapp_manu_setting:
+//                Toast.makeText(this,"Setting",Toast.LENGTH_SHORT).show();
+//                break;
         }
         return super.onContextItemSelected(item);
     }
@@ -60,6 +60,7 @@ public class ManuActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.whatsapp_manu,menu);
+
         return true;
     }
 
@@ -75,12 +76,7 @@ public class ManuActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.whatsapp_manu_whatsAppWeb:
                 Toast.makeText(this,"Whatsapp Web",Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.whatsapp_manu_starredMsg:
-                Toast.makeText(this,"starred msg",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.whatsapp_manu_setting:
-                Toast.makeText(this,"Setting",Toast.LENGTH_SHORT).show();
-                break;
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -108,12 +104,7 @@ public class ManuActivity extends AppCompatActivity implements View.OnClickListe
                     case R.id.whatsapp_manu_whatsAppWeb:
                         Toast.makeText(ManuActivity.this,"Whatsapp Web",Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.whatsapp_manu_starredMsg:
-                        Toast.makeText(ManuActivity.this,"starred msg",Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.whatsapp_manu_setting:
-                        Toast.makeText(ManuActivity.this,"Setting",Toast.LENGTH_SHORT).show();
-                        break;
+
                 }
                 return false;
             }
