@@ -46,12 +46,12 @@ public class ManuActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.whatsapp_manu_whatsAppWeb:
                 Toast.makeText(this,"Whatsapp Web",Toast.LENGTH_SHORT).show();
                 break;
-//            case R.id.whatsapp_manu_starredMsg:
-//                Toast.makeText(this,"starred msg",Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.whatsapp_manu_setting:
-//                Toast.makeText(this,"Setting",Toast.LENGTH_SHORT).show();
-//                break;
+            /*case R.id.w
+                Toast.makeText(this,"starred msg",Toast.LENGTH_SHORT).show();
+                break;*/
+            case R.id.whatsapp_manu_setting:
+                Toast.makeText(this,"Setting",Toast.LENGTH_SHORT).show();
+                break;
         }
         return super.onContextItemSelected(item);
     }
@@ -75,6 +75,9 @@ public class ManuActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.whatsapp_manu_whatsAppWeb:
                 Toast.makeText(this,"Whatsapp Web",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.whatsapp_manu_setting:
+                Toast.makeText(this, "Setting", Toast.LENGTH_SHORT).show();
                 break;
 
         }
@@ -104,6 +107,10 @@ public class ManuActivity extends AppCompatActivity implements View.OnClickListe
                     case R.id.whatsapp_manu_whatsAppWeb:
                         Toast.makeText(ManuActivity.this,"Whatsapp Web",Toast.LENGTH_SHORT).show();
                         break;
+                    case R.id.whatsapp_manu_setting:
+                        Toast.makeText(ManuActivity.this, "Setting", Toast.LENGTH_SHORT).show();
+                        break;
+
 
                 }
                 return false;
