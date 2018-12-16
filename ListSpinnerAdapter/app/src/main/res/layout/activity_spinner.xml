@@ -6,7 +6,7 @@
     tools:context=".SpinnerActivity">
 
     <Spinner
-        android:id="@+id/activity_city_spinner"
+        android:id="@+id/activity_state_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

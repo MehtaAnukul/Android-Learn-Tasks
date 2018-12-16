@@ -2,6 +2,7 @@
     <string name="app_name">ListSpinnerAdapter</string>
     <string name="Abc">Anukul</string>
     <string name="city">Ahmedabad</string>
+    <string name="state">IndiaState</string>
 
     <string-array name="personNameArray">
         <item>ABC</item>
