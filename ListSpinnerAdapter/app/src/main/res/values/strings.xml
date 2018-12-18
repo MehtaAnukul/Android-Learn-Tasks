@@ -3,6 +3,7 @@
     <string name="Abc">Anukul</string>
     <string name="city">Ahmedabad</string>
     <string name="state">IndiaState</string>
+    <string name="cityOfGujarat">Ahmedabad</string>
 
     <string-array name="personNameArray">
         <item>ABC</item>

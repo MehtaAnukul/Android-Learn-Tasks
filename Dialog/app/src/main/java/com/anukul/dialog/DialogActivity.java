@@ -95,10 +95,8 @@ public class DialogActivity extends AppCompatActivity implements View.OnClickLis
         colorGreenSk.setOnSeekBarChangeListener(this);
         colorBlueSk.setOnSeekBarChangeListener(this);
         colorAlphaSk.setOnSeekBarChangeListener(this);
-        
 
     }
-
 
     private void openCustomDialog() {
         final AppCompatDialog appCompatDialog = new AppCompatDialog(DialogActivity.this, R.style.Theme_AppCompat_Light_Dialog_MinWidth);
@@ -116,7 +114,6 @@ public class DialogActivity extends AppCompatActivity implements View.OnClickLis
                 appCompatDialog.dismiss();
             }
         });
-
 
     }
 

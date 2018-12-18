@@ -10,13 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/contextBtn"
-        android:padding="20dp"/>
+        android:padding="20dp"
+        android:textAppearance="?android:textAppearanceLarge"/>
     <Button
         android:id="@+id/activity_manu_popUpBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/popUpBtn"
         android:layout_below="@id/activity_manu_contextBtn"
-        android:padding="20dp"/>
+        android:padding="20dp"
+        android:textAppearance="?android:textAppearanceSmall"/>
 
 </RelativeLayout>

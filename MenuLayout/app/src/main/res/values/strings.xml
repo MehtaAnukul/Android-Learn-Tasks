@@ -10,4 +10,5 @@
     <string name="account">Account</string>
     <string name="chats">Chats</string>
     <string name="notification">Notification</string>
+    <string name="click">Click</string>
 </resources>

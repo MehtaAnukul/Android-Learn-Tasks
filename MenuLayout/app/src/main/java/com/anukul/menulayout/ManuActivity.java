@@ -15,6 +15,7 @@ public class ManuActivity extends AppCompatActivity implements View.OnClickListe
     private Button contextManuBtn;
     private Button popUpManuBtn;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MenuAndCustomdialog</string>
+    <string name="click">Click</string>
+    <string name="newGroup">New Group</string>
+    <string name="newBroadcast">New Broadcast</string>
+</resources>

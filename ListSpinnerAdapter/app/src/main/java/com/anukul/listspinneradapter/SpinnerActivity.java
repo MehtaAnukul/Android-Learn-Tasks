@@ -9,8 +9,10 @@ import java.util.ArrayList;
 
 public class SpinnerActivity extends AppCompatActivity {
     private Spinner stateSpinner;
+    private Spinner citySpinner;
     ArrayAdapter<String> arrayAdapter;
     ArrayList<String> stringStateArrayList;
+    ArrayList<String> stringCityArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +20,8 @@ public class SpinnerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_spinner);
 
         stateSpinner = findViewById(R.id.activity_state_spinner);
-
+        citySpinner = findViewById(R.id.activity_city_spinner);
+        //State of India
         stringStateArrayList = new ArrayList<>();
         stringStateArrayList.add("Jammu & kashmir");
         stringStateArrayList.add("Himanchal Pradesh");
@@ -41,10 +44,35 @@ public class SpinnerActivity extends AppCompatActivity {
         stringStateArrayList.add("Jharkhand");
         stringStateArrayList.add("Chhattisgath");
         stringStateArrayList.add("Orrisa");
-
-
-
         arrayAdapter = new ArrayAdapter<>(this,R.layout.stateofindia_name,R.id.stateofindia_name_Tv,stringStateArrayList);
         stateSpinner.setAdapter(arrayAdapter);
+
+        //City of Gujarat
+        stringCityArrayList = new ArrayList<>();
+        stringCityArrayList.add("Gandhinagar");
+        stringCityArrayList.add("Himatnagar");
+        stringCityArrayList.add("Vadodara ");
+        stringCityArrayList.add("Surat");
+        stringCityArrayList.add("Rajkot ");
+        stringCityArrayList.add("Junagadh");
+        stringCityArrayList.add("Surendranagar");
+        stringCityArrayList.add("Bhavnagar ");
+        stringCityArrayList.add("Jamnagar");
+        stringCityArrayList.add("Mehsana");
+        stringCityArrayList.add("Palitana");
+        stringCityArrayList.add("Visnagar");
+        stringCityArrayList.add("Saputara");
+        stringCityArrayList.add("Patan");
+        stringCityArrayList.add("Valsad");
+        stringCityArrayList.add("Nadiad");
+        stringCityArrayList.add("Anand");
+        stringCityArrayList.add("Navsari");
+        stringCityArrayList.add("Morvi");
+        stringCityArrayList.add("Dahod ");
+        stringCityArrayList.add("Balasinor");
+        arrayAdapter = new ArrayAdapter<>(this,R.layout.stateofindia_name,R.id.stateofgujarat_name_Tv,stringCityArrayList);
+        citySpinner.setAdapter(arrayAdapter);
+
+
     }
 }
