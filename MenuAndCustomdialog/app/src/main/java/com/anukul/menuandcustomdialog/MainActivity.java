@@ -31,9 +31,7 @@ public class MainActivity extends AppCompatActivity implements ListView.OnItemLo
         nameListView = findViewById(R.id.activity_main_listView);
         stringNameArrayList = new ArrayList<>();
 
-        arrayAdapter = new ArrayAdapter<>(MainActivity.this,
-                R.layout.person_name,
-                R.id.person_name_Tv, stringNameArrayList);
+        arrayAdapter = new ArrayAdapter<>(MainActivity.this,R.layout.person_name, R.id.person_name_Tv, stringNameArrayList);
 
 
         nameListView.setAdapter(arrayAdapter);

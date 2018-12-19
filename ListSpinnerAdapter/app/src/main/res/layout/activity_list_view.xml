@@ -8,6 +8,7 @@
 
     //android:entries="@array/personNameArray
     <ListView
+        tools:listitem="@layout/person_name_icon"
         android:id="@+id/activity_main_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
