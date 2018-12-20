@@ -19,7 +19,7 @@ public class BirthdaywishActivity extends AppCompatActivity {
     private Button txtcolorbtn;
     private Button bgtxtcolorbtn;
     private Random rnd = new Random();
-    private String temp = "Mimoh";
+    private String temp = "Anukul";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

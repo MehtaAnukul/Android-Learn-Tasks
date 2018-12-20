@@ -10,9 +10,11 @@ import java.util.ArrayList;
 public class SpinnerActivity extends AppCompatActivity {
     private Spinner stateSpinner;
     private Spinner citySpinner;
-    ArrayAdapter<String> arrayAdapter;
+    ArrayAdapter<String> stateAdapter;
+    ArrayAdapter<String> cityAdapter;
     ArrayList<String> stringStateArrayList;
     ArrayList<String> stringCityArrayList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +46,8 @@ public class SpinnerActivity extends AppCompatActivity {
         stringStateArrayList.add("Jharkhand");
         stringStateArrayList.add("Chhattisgath");
         stringStateArrayList.add("Orrisa");
-        arrayAdapter = new ArrayAdapter<>(this,R.layout.stateofindia_name,R.id.stateofindia_name_Tv,stringStateArrayList);
-        stateSpinner.setAdapter(arrayAdapter);
+        stateAdapter = new ArrayAdapter<>(this,R.layout.stateofindia_name,R.id.stateofindia_name_Tv,stringStateArrayList);
+        stateSpinner.setAdapter(stateAdapter);
 
         //City of Gujarat
         stringCityArrayList = new ArrayList<>();
@@ -70,8 +72,8 @@ public class SpinnerActivity extends AppCompatActivity {
         stringCityArrayList.add("Morvi");
         stringCityArrayList.add("Dahod ");
         stringCityArrayList.add("Balasinor");
-        arrayAdapter = new ArrayAdapter<>(this,R.layout.stateofindia_name,R.id.stateofgujarat_name_Tv,stringCityArrayList);
-        citySpinner.setAdapter(arrayAdapter);
+        cityAdapter = new ArrayAdapter<>(this,R.layout.stateofindia_name,R.id.stateofindia_name_Tv,stringCityArrayList);
+        citySpinner.setAdapter(cityAdapter);
 
 
     }
