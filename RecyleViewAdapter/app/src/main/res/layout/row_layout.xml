@@ -10,7 +10,7 @@
         tools:samples="@samples/"
         android:id="@+id/row_layout_imageView"
         android:layout_width="60dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:src="@drawable/av"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,26 +22,29 @@
             android:id="@+id/row_layout_nameTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/myThemecolorPrimaryDark"
             android:text="@string/app_name"
             android:textAppearance="?android:textAppearanceMedium"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:layout_marginTop="5dp">
             <TextView
                 tools:text="@tools:sample/lorem"
                 android:id="@+id/row_layout_emailTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
-                android:textAppearance="?android:textAppearanceMedium"/>
+                android:textColor="@color/lightDark"
+                android:textAppearance="?android:textAppearanceSmall"/>
             <TextView
                 tools:text="@tools:sample/date/hhmm"
                 android:id="@+id/row_layout_timeTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
+                android:textColor="@color/myThemecolorPrimaryDark"
                 android:textAppearance="?android:textAppearanceSmall"
                 android:layout_alignParentEnd="true"
                 android:layout_alignBottom="@id/row_layout_emailTv"

@@ -23,8 +23,12 @@ public class MainActivity extends AppCompatActivity {
 
         userModelArrayList.add(new UserModel("Anukul","anukul@gmail.com","12:00"));
         userModelArrayList.add(new UserModel("Rahul","rahul@gmail.com","12:00"));
-        userModelArrayList.add(new UserModel("Het","het@gmail.com","12:00"));
+        userModelArrayList.add(new UserModel("Vishal","vishal@gmail.com","12:00"));
         userModelArrayList.add(new UserModel("Mimoh","mimoh@gmail.com","12:00"));
+        userModelArrayList.add(new UserModel("Dhananjay","dhananjay@gmail.com","12:00"));
+        userModelArrayList.add(new UserModel("Karan","karan@gmail.com","12:00"));
+        userModelArrayList.add(new UserModel("Het","het@gmail.com","12:00"));
+
 
         userAdapter = new UserAdapter(userModelArrayList);
 
