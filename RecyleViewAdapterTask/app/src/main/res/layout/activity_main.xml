@@ -10,13 +10,14 @@
 
     <android.support.v7.widget.RecyclerView
         tools:listitem="@layout/row_layout"
-        android:id="@+id/activity_main_recycleView"
+        android:id="@+id/activity_main_rowRecycleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-<android.support.v7.widget.RecyclerView
-    tools:listitem="@layout/custom_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+    tools:listitem="@layout/custom_layout"
+    android:id="@+id/activity_main_customRecycleView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
 </LinearLayout>
