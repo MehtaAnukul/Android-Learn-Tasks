@@ -39,13 +39,6 @@ public class MainActivity extends AppCompatActivity {
         rowRecyclerView.setLayoutManager(rowlayoutManager);
         rowRecyclerView.setAdapter(userRowAdapter);
 
-        //custom_layout
-//        userModelArrayList = new ArrayList<>();
-//        userModelArrayList.add(new UserModel("Anukul"));
-//        userModelArrayList.add(new UserModel("Rahul"));
-//        userModelArrayList.add(new UserModel("Shreya"));
-//        userModelArrayList.add(new UserModel("Jeel"));
-//        userModelArrayList.add(new UserModel("ARSJ"));
 
         userCustomAdapter = new UserCustomAdapter(userModelArrayList);
 

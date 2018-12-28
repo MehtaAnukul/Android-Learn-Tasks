@@ -42,14 +42,14 @@ public class signupActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void gotoLoginActivity() {
-        /*final String email = emailEd.getText().toString().trim();
+        final String email = emailEd.getText().toString().trim();
         final String password = passwordEd.getText().toString().trim();
-        final String rePassword = rePasswordEd.getText().toString().trim();*/
+        final String rePassword = rePasswordEd.getText().toString().trim();
 
         final Intent gotoLoginActivityIntent = new Intent(signupActivity.this,LoginActivity.class);
-       /* gotoLoginActivityIntent.putExtra("KEY EMAIL",email);
-        gotoLoginActivityIntent.putExtra("KEY PASSWORD",password);
-        gotoLoginActivityIntent.putExtra("KEY REPASSWORD",rePassword);*/
+        gotoLoginActivityIntent.putExtra("KEY_EMAIL",email);
+        gotoLoginActivityIntent.putExtra("KEY_PASSWORD",password);
+        gotoLoginActivityIntent.putExtra("KEY_REPASSWORD",rePassword);
         startActivity(gotoLoginActivityIntent);
 
     }
