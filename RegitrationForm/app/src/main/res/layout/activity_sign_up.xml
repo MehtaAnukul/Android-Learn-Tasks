@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/SignUp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/avtar"/>
+
+        <LinearLayout
+            android:id="@+id/activity_signUp_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/activity_signUp_nameEd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Name"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/activity_signUp_emailEd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Email"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/activity_signUp_passwordEd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <RadioGroup
+                android:id="@+id/activity_signUp_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Male" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Female" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:id="@+id/activity_signUp_adventureCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/Adventure" />
+
+                <CheckBox
+                    android:id="@+id/activity_signUp_singingCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/activity_signUp_adventureCheckBox"
+                    android:text="@string/Signing" />
+
+                <CheckBox
+                    android:id="@+id/activity_signUp_DanceCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_signUp_adventureCheckBox"
+                    android:text="@string/Dance" />
+
+                <CheckBox
+                    android:id="@+id/activity_signUp_GymCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_signUp_singingCheckBox"
+                    android:layout_toRightOf="@id/activity_signUp_adventureCheckBox"
+                    android:text="@string/Gym" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/activity_signUp_signUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/signUpBtn"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/activity_signUp_loginTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Already"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+</RelativeLayout>
+
+</ScrollView>
