@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <Button
+            android:id="@+id/activity_main_sumBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:padding="5dp"/>
+        <Button
+            android:id="@+id/activity_main_subBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/activity_main_sumBtn"/>
+        <Button
+            android:id="@+id/activity_main_mulBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:padding="5dp"
+            android:layout_below="@id/activity_main_sumBtn"/>
+        <Button
+            android:id="@+id/activity_main_divBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:padding="5dp"
+            android:layout_below="@id/activity_main_sumBtn"
+            android:layout_toRightOf="@id/activity_main_mulBtn"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

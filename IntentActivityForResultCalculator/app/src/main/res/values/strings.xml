@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IntentActivityForResultCalculator</string>
+    <string name="ValueOne">ValueOne</string>
+    <string name="valueSecond">ValueSecond</string>
+    <string name="valueSec">valueSec</string>
+    <string name="OK">OK</string>
+    <string name="cencal">Cancel</string>
+</resources>

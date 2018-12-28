@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:layout_marginTop="50dp">
+        <EditText
+            android:id="@+id/activity_second_valueOneEd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/ValueOne"
+            android:layout_weight="1"
+            android:textAlignment="center" />
+        <EditText
+            android:id="@+id/activity_second_valueSecEd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/valueSec"
+            android:layout_weight="1"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <Button
+            android:id="@+id/activity_second_okBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/OK"/>
+        <Button
+            android:id="@+id/activity_second_cencalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cencal"/>
+    </LinearLayout>
+</RelativeLayout>
