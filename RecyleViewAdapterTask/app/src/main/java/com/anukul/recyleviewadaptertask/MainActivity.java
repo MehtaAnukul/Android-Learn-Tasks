@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         rowRecyclerView.setAdapter(userRowAdapter);
 
 
+        //custom layout
         userCustomAdapter = new UserCustomAdapter(userModelArrayList);
 
         RecyclerView.LayoutManager customlayoutManager = new GridLayoutManager(this,2,LinearLayoutManager.VERTICAL,false);

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecycleViewCardViewAdapter</string>
+    <string name="alienware">It\'s a Alienware</string>
+    <string name="airlines">Best Airlines</string>
+</resources>
