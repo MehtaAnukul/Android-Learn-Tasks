@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TravelStreamCardView</string>
+    <string name="Island">Top 10 Australian Beaches</string>
+    <string name="Number">Number 10</string>
+    <string name="BeachesName">Whitehaven Beaches</string>
+    <string name="BeacheLocation">Whitsunday Island</string>
+    <string name="share">SHARE</string>
+    <string name="Export">EXPLORE</string>
 </resources>

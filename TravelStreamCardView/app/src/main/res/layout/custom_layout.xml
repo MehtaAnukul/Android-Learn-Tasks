@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/custom_layout_directinoIslandImg"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="@drawable/direction_island" />
+
+        <TextView
+            android:id="@+id/custom_layout_topBeacheTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/custom_layout_directinoIslandImg"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="5dp"
+            android:text="@string/Island"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorWhite"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:id="@+id/custom_layout_textLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custom_layout_directinoIslandImg"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/custom_layout_numberTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Number"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/custom_layout_beacheNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/BeachesName"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:fontFamily="sans-serif-condensed" />
+
+            <TextView
+                android:id="@+id/custom_layout_beacheLocationTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/BeacheLocation"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:fontFamily="sans-serif-condensed" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custom_layout_textLinearLayout"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Export"
+                android:textColor="@color/colorOrange" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
