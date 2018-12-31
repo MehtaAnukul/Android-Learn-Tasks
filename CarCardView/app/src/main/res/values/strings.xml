@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CarCardView</string>
+    <string name="welcome">Welcome Back !</string>
+    <string name="Message">It\'s been a while.</string>
+    <string name="Msg">Drive any new car lately ?</string>
+    <string name="No">NO</string>
+    <string name="yes">YES</string>
+    <string name="carName">Bugatti Chiron</string>
+    <string name="Price">$2.5 million</string>
+    <string name="Details">DETAILS</string>
+    <string name="Review">REVIEW</string>
+</resources>

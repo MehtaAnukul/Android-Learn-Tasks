@@ -15,7 +15,7 @@
         <ImageView
             android:id="@+id/custom_layout_directinoIslandImg"
             android:layout_width="match_parent"
-            android:layout_height="190dp"
+            android:layout_height="150dp"
             android:background="@drawable/direction_island" />
 
         <TextView
@@ -76,14 +76,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/share" />
+                android:text="@string/share"
+                android:textSize="10sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Export"
-                android:textColor="@color/colorOrange" />
+                android:textColor="@color/colorOrange"
+                android:textSize="10sp"/>
         </LinearLayout>
 
 
