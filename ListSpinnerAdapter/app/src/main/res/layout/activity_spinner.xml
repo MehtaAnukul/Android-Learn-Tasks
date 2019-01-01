@@ -8,12 +8,14 @@
     <Spinner
         android:id="@+id/activity_state_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/stateofindia_name"/>
 
     <Spinner
         android:id="@+id/activity_city_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/activity_state_spinner" />
+        android:layout_below="@+id/activity_state_spinner"
+        tools:listitem="@layout/stateofindia_name"/>
 
 </RelativeLayout>

@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CarCustomAdapter  extends RecyclerView.Adapter<CarCustomAdapter.CarCustomViewHolder> {
+public class CarCustomAdapter extends RecyclerView.Adapter<CarCustomAdapter.CarCustomViewHolder> {
 
-   private ArrayList<CarCustomModel> carCustomModelArrayList;
+    private ArrayList<CarCustomModel> carCustomModelArrayList;
 
     public CarCustomAdapter(ArrayList<CarCustomModel> carCustomModelArrayList) {
         this.carCustomModelArrayList = carCustomModelArrayList;
@@ -27,28 +27,24 @@ public class CarCustomAdapter  extends RecyclerView.Adapter<CarCustomAdapter.Car
             carPrice = itemView.findViewById(R.id.custom_layout_carPriceTv);
         }
     }
+
     @NonNull
     @Override
     public CarCustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_layout,parent,false);
-
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_layout, parent, true);
         return new CarCustomViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CarCustomViewHolder holder, int position) {
-
         CarCustomModel carCustomModel = carCustomModelArrayList.get(position);
-
         holder.carNameTv.setText(carCustomModel.getCarName());
         holder.carPrice.setText(carCustomModel.getCarPrice());
-
     }
 
     @Override
     public int getItemCount() {
         return carCustomModelArrayList.size();
     }
-
 
 }
