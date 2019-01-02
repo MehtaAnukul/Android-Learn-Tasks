@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardElevation="15dp"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true">
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/custom_layout_ImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/man"
+        android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/custom_layout_nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_below="@id/custom_layout_ImageView"/>
+
+    <View
+        android:background="@color/colorGray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:layout_below="@id/custom_layout_nameTv"/>
+        <TextView
+            android:id="@+id/custom_layout_emailTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/custom_layout_nameTv"
+            android:padding="10dp"
+            />
+
+
+</RelativeLayout>
+    </android.support.v7.widget.CardView>

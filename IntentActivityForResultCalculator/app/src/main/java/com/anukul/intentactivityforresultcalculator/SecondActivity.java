@@ -50,6 +50,10 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.activity_second_okBtn:
                 performTask();
                 break;
+            case R.id.activity_second_cencalBtn:
+                setResult(RESULT_CANCELED);
+                finish();
+                break;
         }
 
     }

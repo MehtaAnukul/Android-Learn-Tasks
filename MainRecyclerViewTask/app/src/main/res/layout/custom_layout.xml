@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    app:cardPreventCornerOverlap="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/custom_layout_iconImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/man" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/custom_layout_iconImageView"
+            android:orientation="vertical"
+            android:padding="9dp">
+
+            <TextView
+                android:id="@+id/custom_layout_nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="@string/name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="@string/date" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/custom_layout_optionMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_more_vert_navigation_menu" />
+
+        <TextView
+            android:id="@+id/custom_layout_detailsTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custom_layout_iconImageView"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="@string/details" />
+
+        <ImageView
+            android:id="@+id/custom_layout_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/custom_layout_detailsTv"
+            android:background="@drawable/direction_island" />
+
+        <TextView
+            android:id="@+id/custom_layout_timeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custom_layout_ImageView"
+            android:layout_marginTop="10dp"
+            android:text="@string/time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custom_layout_timeTv"
+            android:padding="10dp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/time_chip_view"
+                android:padding="3dp"
+                android:text="@string/timeOne"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/time_chip_view"
+                android:padding="3dp"
+                android:text="@string/timeTwo"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/time_chip_view"
+                android:padding="3dp"
+                android:text="@string/timeThree"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

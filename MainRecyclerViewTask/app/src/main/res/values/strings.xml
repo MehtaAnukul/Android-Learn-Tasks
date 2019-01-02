@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MainRecyclerViewTask</string>
+    <string name="name">Name</string>
+    <string name="date">Jan 1, 2018</string>
+    <string name="details">Card content that exceeds the maximum card height is truncated and does not scroll, but the card can be expanded.</string>
+    <string name="time">Time Availability</string>
+    <string name="timeOne">10:57 AM</string>
+    <string name="timeTwo">11:22 AM</string>
+    <string name="timeThree">12:54 PM</string>
+    <string name="even">Even</string>
+</resources>
