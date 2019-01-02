@@ -8,4 +8,7 @@
     <string name="timeTwo">11:22 AM</string>
     <string name="timeThree">12:54 PM</string>
     <string name="even">Even</string>
+    <string name="odd">Odd</string>
+    <string name="detail">Enter Details</string>
+    <string name="add">ADD</string>
 </resources>

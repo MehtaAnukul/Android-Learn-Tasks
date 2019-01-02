@@ -16,7 +16,7 @@
         android:padding="5dp">
 
         <ImageView
-            android:id="@+id/custom_layout_iconImageView"
+            android:id="@+id/custom_layout_userIconImageView"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/man" />
@@ -24,7 +24,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/custom_layout_iconImageView"
+            android:layout_toRightOf="@id/custom_layout_userIconImageView"
             android:orientation="vertical"
             android:padding="9dp">
 
@@ -36,6 +36,7 @@
                 android:text="@string/name" />
 
             <TextView
+                android:id="@+id/custom_layout_dateTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="2dp"
@@ -53,13 +54,13 @@
             android:id="@+id/custom_layout_detailsTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/custom_layout_iconImageView"
+            android:layout_below="@id/custom_layout_userIconImageView"
             android:layout_marginTop="15dp"
             android:padding="5dp"
             android:text="@string/details" />
 
         <ImageView
-            android:id="@+id/custom_layout_ImageView"
+            android:id="@+id/custom_layout_userContentImageView"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_below="@id/custom_layout_detailsTv"
@@ -69,7 +70,7 @@
             android:id="@+id/custom_layout_timeTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/custom_layout_ImageView"
+            android:layout_below="@id/custom_layout_userContentImageView"
             android:layout_marginTop="10dp"
             android:text="@string/time" />
 
