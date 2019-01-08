@@ -15,6 +15,12 @@ public class UserModel {
         this.userContentImg = userContentImg;
     }
 
+    public UserModel(String nameTv, String dateTv, String details) {
+        this.nameTv = nameTv;
+        this.dateTv = dateTv;
+        this.details = details;
+    }
+
     public UserModel() {
 
     }

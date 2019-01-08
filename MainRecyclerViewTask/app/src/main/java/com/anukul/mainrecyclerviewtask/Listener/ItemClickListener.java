@@ -6,7 +6,7 @@ import com.anukul.mainrecyclerviewtask.Model.UserModel;
 
 public interface ItemClickListener {
 
-    public void onItemClick(UserModel userModel, View view);
+    public void onItemClick(UserModel userModel, View view, int position);
 
 
 }

@@ -35,7 +35,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/activity_insertdata_addBtn"
+        android:id="@+id/activity_insertdata_insertBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add"

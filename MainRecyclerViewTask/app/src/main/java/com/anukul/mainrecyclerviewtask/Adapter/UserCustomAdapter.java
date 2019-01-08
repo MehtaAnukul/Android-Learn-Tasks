@@ -9,12 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.anukul.mainrecyclerviewtask.Listener.ItemClickListener;
-import com.anukul.mainrecyclerviewtask.R;
 import com.anukul.mainrecyclerviewtask.Model.UserModel;
+import com.anukul.mainrecyclerviewtask.R;
 
 import java.util.ArrayList;
 
-public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.UserCustomViewHolder>{
+public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.UserCustomViewHolder> {
 
     private ArrayList<UserModel> userModelArrayList;
     private ItemClickListener itemClickListener;
@@ -33,6 +33,7 @@ public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.Us
         ImageView customOptionMenu;
 
         UserModel userModel;
+        int position;
 
         public UserCustomViewHolder(View itemView) {
             super(itemView);
@@ -48,15 +49,15 @@ public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.Us
             itemView.setOnClickListener(this);
         }
 
-        public void setData(UserModel userModel){
+        public void setData(UserModel userModel, int position) {
             this.userModel = userModel;
-
+            this.position = position;
 
             nameTv.setText(userModel.getNameTv());
             dateTv.setText(userModel.getDateTv());
             detailsTv.setText(userModel.getDetails());
-            userIconImageView.setImageResource(userModel.getUserIconImg());
-            userContentImageView.setImageResource(userModel.getUserContentImg());
+//            userIconImageView.setImageResource(userModel.getUserIconImg());
+//            userContentImageView.setImageResource(userModel.getUserContentImg());
 
 
         }
@@ -64,15 +65,16 @@ public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.Us
         @Override
         public void onClick(View v) {
 
-            if(itemClickListener != null){
-                itemClickListener.onItemClick(userModel,v);
+            if (itemClickListener != null) {
+                itemClickListener.onItemClick(userModel, v,position);
             }
         }
     }
+
     @NonNull
     @Override
     public UserCustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_layout,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_layout, parent, false);
         return new UserCustomViewHolder(view);
     }
 
@@ -81,7 +83,8 @@ public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.Us
 
         UserModel userModel = userModelArrayList.get(position);
 
-        holder.setData(userModel);
+
+        holder.setData(userModel, position);
     }
 
     @Override
