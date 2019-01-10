@@ -83,7 +83,6 @@ public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.Us
 
         UserModel userModel = userModelArrayList.get(position);
 
-
         holder.setData(userModel, position);
     }
 
