@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.InsertNotesDataActivity"
+    tools:context=".activity.InsertNotesDataActivity"
     android:padding="20dp">
 
     <LinearLayout
@@ -32,7 +32,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/activity_insert_NotesData_addBtn"
+        android:id="@+id/activity_insert_NotesData_insertBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

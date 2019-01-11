@@ -1,14 +1,14 @@
-package com.anukul.notesrecycleviewtask.Model;
+package com.anukul.notesrecycleviewtask.model;
 
 public class NotesModel {
     private String title;
     private String category;
-    private String deteils;
+    private String details;
 
-    public NotesModel(String title, String category, String deteils) {
+    public NotesModel(String title, String category, String details) {
         this.title = title;
         this.category = category;
-        this.deteils = deteils;
+        this.details = details;
     }
 
     public NotesModel() {
@@ -31,11 +31,11 @@ public class NotesModel {
         this.category = category;
     }
 
-    public String getDeteils() {
-        return deteils;
+    public String getDetails() {
+        return details;
     }
 
-    public void setDeteils(String deteils) {
-        this.deteils = deteils;
+    public void setDetails(String details) {
+        this.details = details;
     }
 }

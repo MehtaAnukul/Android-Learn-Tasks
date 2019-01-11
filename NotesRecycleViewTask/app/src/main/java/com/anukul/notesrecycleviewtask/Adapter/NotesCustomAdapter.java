@@ -1,34 +1,36 @@
-package com.anukul.notesrecycleviewtask.Adapter;
+package com.anukul.notesrecycleviewtask.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.anukul.notesrecycleviewtask.Model.NotesModel;
 import com.anukul.notesrecycleviewtask.R;
 import com.anukul.notesrecycleviewtask.listener.ItemClickListener;
+import com.anukul.notesrecycleviewtask.model.NotesModel;
 
 import java.util.ArrayList;
 
 public class NotesCustomAdapter extends RecyclerView.Adapter<NotesCustomAdapter.NotesCustomViewHolder> {
 
-    private ItemClickListener itemClickListener;
     private ArrayList<NotesModel> notesModelArrayList;
+    private ItemClickListener itemClickListener;
 
-    public NotesCustomAdapter(ItemClickListener itemClickListener, ArrayList<NotesModel> notesModelArrayList) {
-        this.itemClickListener = itemClickListener;
+    public NotesCustomAdapter(ArrayList<NotesModel> notesModelArrayList, ItemClickListener itemClickListener) {
         this.notesModelArrayList = notesModelArrayList;
+        this.itemClickListener = itemClickListener;
     }
 
     public class NotesCustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        EditText titleEd;
-        EditText categoryEd;
-        EditText detailsEd;
+
+        TextView titleTv;
+        TextView categoryTv;
+        TextView detailsTv;
         ImageView notesCustomMenu;
+
 
         NotesModel notesModel;
         int position;
@@ -36,9 +38,9 @@ public class NotesCustomAdapter extends RecyclerView.Adapter<NotesCustomAdapter.
         public NotesCustomViewHolder(View itemView) {
             super(itemView);
 
-            titleEd = itemView.findViewById(R.id.activity_insert_NotesData_titleEd);
-            categoryEd = itemView.findViewById(R.id.activity_insert_NotesData_categoryEd);
-            detailsEd = itemView.findViewById(R.id.activity_insert_NotesData_detailsEd);
+            titleTv = itemView.findViewById(R.id.notes_custom_layout_titleTv);
+            categoryTv = itemView.findViewById(R.id.notes_custom_layout_categoryTv);
+            detailsTv = itemView.findViewById(R.id.notes_custom_layout_detailsTv);
 
             notesCustomMenu = itemView.findViewById(R.id.notes_custom_layout_optionMenu);
 
@@ -49,9 +51,9 @@ public class NotesCustomAdapter extends RecyclerView.Adapter<NotesCustomAdapter.
             this.notesModel = notesModel;
             this.position = position;
 
-            titleEd.setText(notesModel.getTitle());
-            categoryEd.setText(notesModel.getCategory());
-            detailsEd.setText(notesModel.getDeteils());
+            titleTv.setText(notesModel.getTitle());
+            categoryTv.setText(notesModel.getCategory());
+            detailsTv.setText(notesModel.getDetails());
         }
 
         @Override
@@ -65,7 +67,7 @@ public class NotesCustomAdapter extends RecyclerView.Adapter<NotesCustomAdapter.
     @NonNull
     @Override
     public NotesCustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_notes_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.notes_custom_layout, parent, false);
         return new NotesCustomViewHolder(view);
     }
 
