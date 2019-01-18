@@ -12,16 +12,19 @@ import java.util.ArrayList;
 public class TravelBeacheAdapter extends RecyclerView.Adapter<TravelBeacheAdapter.TravalBeacheViewHolder> {
 
     private ArrayList<TravelBeacheModel> travelBeacheModelArrayList;
+    private ItemClickListener itemClickListener;
 
-    public TravelBeacheAdapter(ArrayList<TravelBeacheModel> travelBeacheModelArrayList) {
+    public TravelBeacheAdapter(ArrayList<TravelBeacheModel> travelBeacheModelArrayList, ItemClickListener itemClickListener) {
         this.travelBeacheModelArrayList = travelBeacheModelArrayList;
+        this.itemClickListener = itemClickListener;
     }
 
-    public class TravalBeacheViewHolder extends RecyclerView.ViewHolder {
+    public class TravalBeacheViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView topBeacheTv;
         TextView numberTv;
         TextView beacheNameTv;
         TextView beacheLocation;
+        TravelBeacheModel travelBeacheModel;
 
         public TravalBeacheViewHolder(View itemView) {
             super(itemView);
@@ -30,7 +33,26 @@ public class TravelBeacheAdapter extends RecyclerView.Adapter<TravelBeacheAdapte
             numberTv = itemView.findViewById(R.id.custom_layout_numberTv);
             beacheNameTv = itemView.findViewById(R.id.custom_layout_beacheNameTv);
             beacheLocation = itemView.findViewById(R.id.custom_layout_beacheLocationTv);
+            itemView.setOnClickListener(this);
         }
+
+        public void setData(TravelBeacheModel data) {
+            this.travelBeacheModel = data;
+
+            topBeacheTv.setText(data.getTopBeache());
+            numberTv.setText(data.getNumber());
+            beacheNameTv.setText(data.getNameOfBeache());
+            beacheLocation.setText(data.getBeacheLocation());
+
+        }
+        @Override
+        public void onClick(View v) {
+            if (itemClickListener != null){
+                itemClickListener.onItemClick(travelBeacheModel);
+            }
+        }
+
+
     }
 
     @NonNull
@@ -44,10 +66,8 @@ public class TravelBeacheAdapter extends RecyclerView.Adapter<TravelBeacheAdapte
     public void onBindViewHolder(@NonNull TravalBeacheViewHolder holder, int position) {
         TravelBeacheModel travelBeacheModel = travelBeacheModelArrayList.get(position);
 
-        holder.topBeacheTv.setText(travelBeacheModel.getTopBeache());
-        holder.numberTv.setText(travelBeacheModel.getNumber());
-        holder.beacheNameTv.setText(travelBeacheModel.getNameOfBeache());
-        holder.beacheLocation.setText(travelBeacheModel.getBeacheLocation());
+        holder.setData(travelBeacheModel);
+
     }
 
     @Override

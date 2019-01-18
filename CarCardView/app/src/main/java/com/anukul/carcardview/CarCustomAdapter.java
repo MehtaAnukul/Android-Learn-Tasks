@@ -31,7 +31,7 @@ public class CarCustomAdapter extends RecyclerView.Adapter<CarCustomAdapter.CarC
     @NonNull
     @Override
     public CarCustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_layout, parent, true);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_layout, parent, false);
         return new CarCustomViewHolder(view);
     }
 

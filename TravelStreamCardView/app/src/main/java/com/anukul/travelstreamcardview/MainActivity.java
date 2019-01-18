@@ -4,10 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ItemClickListener {
     private RecyclerView customRecyclerView;
     private TravelBeacheAdapter travelBeacheAdapter;
     private ArrayList<TravelBeacheModel> travelBeacheModelArrayList;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         travelBeacheModelArrayList.add(new TravelBeacheModel("Wineglass Bay", "Number 6", "Wineglass Bay", "Freycinet National Park TAS"));
         travelBeacheModelArrayList.add(new TravelBeacheModel("75Mile Beach", "Number 5", "75Mile Beach", "Fraser Island QLD  "));
 
-        travelBeacheAdapter = new TravelBeacheAdapter(travelBeacheModelArrayList);
+        travelBeacheAdapter = new TravelBeacheAdapter(travelBeacheModelArrayList,this);
 
         RecyclerView.LayoutManager customLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         customRecyclerView.setLayoutManager(customLayoutManager);
@@ -36,4 +37,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemClick(TravelBeacheModel travelBeacheModel) {
+        Toast.makeText(this, ""+travelBeacheModel.getNameOfBeache(), Toast.LENGTH_SHORT).show();
+    }
 }
