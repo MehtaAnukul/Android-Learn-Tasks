@@ -41,12 +41,12 @@ public class MainActivity extends AppCompatActivity {
 
         //custom layout
         airlineModelArrayList = new ArrayList<>();
-        airlineModelArrayList.add(new AirlineModel("Jet Airways(9W)",R.drawable.airlines));
-        airlineModelArrayList.add(new AirlineModel("Indigo(6E)",R.drawable.alienware));
-        airlineModelArrayList.add(new AirlineModel("Air India(AI)",R.drawable.sydney_airport));
-//        airlineModelArrayList.add(new AirlineModel("SpiceJet(SG)"));
-//        airlineModelArrayList.add(new AirlineModel("GoAir(G8)"));
-//        airlineModelArrayList.add(new AirlineModel("Qatar Airways(QR)"));
+        airlineModelArrayList.add(new AirlineModel("Jet Airways(9W)",R.drawable.jet_airways_9w));
+        airlineModelArrayList.add(new AirlineModel("Indigo(6E)",R.drawable.indigo_6e));
+        airlineModelArrayList.add(new AirlineModel("Air India(AI)",R.drawable.air_india));
+        airlineModelArrayList.add(new AirlineModel("SpiceJet(SG)",R.drawable.spicejet));
+        airlineModelArrayList.add(new AirlineModel("GoAir(G8)",R.drawable.go_air_g8));
+        airlineModelArrayList.add(new AirlineModel("Qatar Airways(QR)",R.drawable.qatar_aieways));
 
 
         airlineNameCustomAdapter = new AirlineNameCustomAdapter(airlineModelArrayList);
