@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,12 +21,13 @@ public class AirlineNameCustomAdapter extends RecyclerView.Adapter<AirlineNameCu
     public class AirlineViewHolder extends RecyclerView.ViewHolder {
 
         TextView airlineNameTv;
+        ImageView imageView;
 
         public AirlineViewHolder(View itemView) {
             super(itemView);
 
             airlineNameTv = itemView.findViewById(R.id.custom_layout_airlineNameTv);
-
+            imageView = itemView.findViewById(R.id.custom_layout_airlinesImageView);
         }
     }
 
@@ -42,6 +44,7 @@ public class AirlineNameCustomAdapter extends RecyclerView.Adapter<AirlineNameCu
 
         holder.airlineNameTv.setText(airlineModel.getAitlineName());
 
+        holder.imageView.setImageResource(airlineModel.getImgRes());
     }
 
     @Override

@@ -5,12 +5,14 @@ public class TravelBeacheModel {
     private String number;
     private String nameOfBeache;
     private String beacheLocation;
+    private int travelBeacheImages;
 
-    public TravelBeacheModel(String topBeache, String number, String nameOfBeache, String beacheLocation) {
+    public TravelBeacheModel(String topBeache, String number, String nameOfBeache, String beacheLocation, int travelBeacheImages) {
         this.topBeache = topBeache;
         this.number = number;
         this.nameOfBeache = nameOfBeache;
         this.beacheLocation = beacheLocation;
+        this.travelBeacheImages = travelBeacheImages;
     }
 
     public TravelBeacheModel() {
@@ -47,5 +49,13 @@ public class TravelBeacheModel {
 
     public void setBeacheLocation(String beacheLocation) {
         this.beacheLocation = beacheLocation;
+    }
+
+    public int getTravelBeacheImages() {
+        return travelBeacheImages;
+    }
+
+    public void setTravelBeacheImages(int travelBeacheImages) {
+        this.travelBeacheImages = travelBeacheImages;
     }
 }

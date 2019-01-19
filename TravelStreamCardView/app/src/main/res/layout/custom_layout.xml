@@ -13,16 +13,15 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/custom_layout_directinoIslandImg"
+            android:id="@+id/custom_layout_beachImg"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@drawable/direction_island" />
+            android:layout_height="150dp" />
 
         <TextView
             android:id="@+id/custom_layout_topBeacheTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@id/custom_layout_directinoIslandImg"
+            android:layout_alignEnd="@id/custom_layout_beachImg"
             android:fontFamily="sans-serif-condensed"
             android:padding="5dp"
             android:text="@string/Island"
@@ -34,7 +33,7 @@
             android:id="@+id/custom_layout_textLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/custom_layout_directinoIslandImg"
+            android:layout_below="@id/custom_layout_beachImg"
             android:orientation="vertical"
             android:padding="10dp"
             android:weightSum="3">

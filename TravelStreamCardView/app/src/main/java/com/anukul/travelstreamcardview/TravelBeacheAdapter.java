@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class TravelBeacheAdapter extends RecyclerView.Adapter<TravelBeacheAdapte
         TextView numberTv;
         TextView beacheNameTv;
         TextView beacheLocation;
+        ImageView beacheImg;
         TravelBeacheModel travelBeacheModel;
 
         public TravalBeacheViewHolder(View itemView) {
@@ -33,6 +35,7 @@ public class TravelBeacheAdapter extends RecyclerView.Adapter<TravelBeacheAdapte
             numberTv = itemView.findViewById(R.id.custom_layout_numberTv);
             beacheNameTv = itemView.findViewById(R.id.custom_layout_beacheNameTv);
             beacheLocation = itemView.findViewById(R.id.custom_layout_beacheLocationTv);
+            beacheImg = itemView.findViewById(R.id.custom_layout_beachImg);
             itemView.setOnClickListener(this);
         }
 
@@ -43,6 +46,7 @@ public class TravelBeacheAdapter extends RecyclerView.Adapter<TravelBeacheAdapte
             numberTv.setText(data.getNumber());
             beacheNameTv.setText(data.getNameOfBeache());
             beacheLocation.setText(data.getBeacheLocation());
+            beacheImg.setImageResource(data.getTravelBeacheImages());
 
         }
         @Override

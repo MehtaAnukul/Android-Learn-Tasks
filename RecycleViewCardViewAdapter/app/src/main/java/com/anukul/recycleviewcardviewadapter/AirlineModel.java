@@ -1,14 +1,16 @@
 package com.anukul.recycleviewcardviewadapter;
 
 public class AirlineModel {
-    private String aitlineName;
 
-    public AirlineModel(String aitlineName) {
+    private String aitlineName;
+    private int imgRes;
+
+    public AirlineModel(String aitlineName, int imgRes) {
         this.aitlineName = aitlineName;
+        this.imgRes = imgRes;
     }
 
     public AirlineModel() {
-
     }
 
     public String getAitlineName() {
@@ -17,5 +19,13 @@ public class AirlineModel {
 
     public void setAitlineName(String aitlineName) {
         this.aitlineName = aitlineName;
+    }
+
+    public int getImgRes() {
+        return imgRes;
+    }
+
+    public void setImgRes(int imgRes) {
+        this.imgRes = imgRes;
     }
 }
