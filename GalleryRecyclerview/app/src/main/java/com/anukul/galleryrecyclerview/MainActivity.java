@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         galleryModelArrayList.add(new GalleryModel("Oudi",R.drawable.lamborghini_huracan));
         galleryModelArrayList.add(new GalleryModel("Oudi",R.drawable.lamborghini_huracan));
         galleryModelArrayList.add(new GalleryModel("Oudi",R.drawable.lamborghini_huracan));
-        galleryModelArrayList.add(new GalleryModel("Oudi",R.drawable.lamborghini_huracan));galleryModelArrayList.add(new GalleryModel("Oudi",R.drawable.lamborghini_huracan));
+        galleryModelArrayList.add(new GalleryModel("Oudi",R.drawable.lamborghini_huracan));
+        galleryModelArrayList.add(new GalleryModel("Oudi",R.drawable.lamborghini_huracan));
         galleryModelArrayList.add(new GalleryModel("Oudi",R.drawable.lamborghini_huracan));
 
 
