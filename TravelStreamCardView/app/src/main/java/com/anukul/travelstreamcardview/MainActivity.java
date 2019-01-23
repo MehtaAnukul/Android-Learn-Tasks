@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         displayImg.setImageResource(travelBeacheModel.getTravelBeacheImages());
         appCompatDialog.setTitle(travelBeacheModel.getNameOfBeache());
         appCompatDialog.show();
+        appCompatDialog.setCanceledOnTouchOutside(false);
 
         final ImageView closeIcon = appCompatDialog.findViewById(R.id.display_image_customLayout_closeIcon);
         closeIcon.setOnClickListener(new View.OnClickListener() {
