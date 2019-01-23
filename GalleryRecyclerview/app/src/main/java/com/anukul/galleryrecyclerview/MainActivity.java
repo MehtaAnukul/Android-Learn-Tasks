@@ -1,5 +1,6 @@
 package com.anukul.galleryrecyclerview;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -55,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
     @Override
     public void onItemClick(GalleryModel galleryModel) {
+        Intent gotoDisplayActivity = new Intent(MainActivity.this,DisplayActivity.class);
+        gotoDisplayActivity.putExtra(AppConstant.KEY_IMG,galleryModel.getImgRes());
+        startActivity(gotoDisplayActivity);
+
         Toast.makeText(this, ""+galleryModel.getCarName(), Toast.LENGTH_SHORT).show();
 
     }

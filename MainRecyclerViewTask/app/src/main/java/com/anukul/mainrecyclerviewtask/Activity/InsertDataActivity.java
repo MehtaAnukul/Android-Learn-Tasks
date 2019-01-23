@@ -77,18 +77,24 @@ public class InsertDataActivity extends AppCompatActivity implements View.OnClic
 
     private void addUpdateData() {
 
+
         final boolean status = intent.getBooleanExtra(AppConstant.KEY_CODE, false);
+
         if (status) {
 
-            intent.putExtra(AppConstant.KEY_CODE, true);
+//            intent.putExtra(AppConstant.KEY_CODE, true);
             int position = intent.getIntExtra(AppConstant.KEY_UPDATE_POSITION, 200);
-            Log.e(TAG, "addUpdateData: " + status + position);
+
+            Log.e(TAG, "addUpdateData: "  + position);
+
 //            intent.putExtra(AppConstant.KEY_UPDATE_POSITION, position);
+
         }
 
         intent.putExtra(AppConstant.KEY_NAME, nameData);
         intent.putExtra(AppConstant.KEY_DATE, dateData);
         intent.putExtra(AppConstant.KEY_DETAILS, detailsData);
+
         setResult(RESULT_OK, intent);
         finish();
 

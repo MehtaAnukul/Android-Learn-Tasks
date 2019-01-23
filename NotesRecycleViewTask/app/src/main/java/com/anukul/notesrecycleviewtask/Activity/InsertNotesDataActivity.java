@@ -36,7 +36,10 @@ public class InsertNotesDataActivity extends AppCompatActivity implements View.O
 
     private void changedBtnText() {
         final boolean status = intent.getBooleanExtra(AppConstant.KEY_CODE,true);
-        insertBtn.setText("Update");
+        if (status){
+            insertBtn.setText("Update");
+        }
+
     }
 
     private void initView() {
@@ -64,9 +67,9 @@ public class InsertNotesDataActivity extends AppCompatActivity implements View.O
     private void addUpdateData() {
         final boolean status = intent.getBooleanExtra(AppConstant.KEY_CODE,false);
         if (status){
-            intent.putExtra(AppConstant.KEY_CODE,true);
+           // intent.putExtra(AppConstant.KEY_CODE,true);
             int position = intent.getIntExtra(AppConstant.KEY_UPDATE_POSITION,200);
-            Log.e(TAG,"addUpdateData : " + status +position);
+            Log.e(TAG,"addUpdateData : "+position);
         }
         intent.putExtra(AppConstant.KEY_title,title);
         intent.putExtra(AppConstant.KEY_category,category);

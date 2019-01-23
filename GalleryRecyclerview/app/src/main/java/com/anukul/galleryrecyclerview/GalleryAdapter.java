@@ -24,6 +24,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
         TextView carName;
         ImageView carImgRes;
         GalleryModel galleryModel;
+
         public GalleryViewHolder(View itemView) {
             super(itemView);
             carName = itemView.findViewById(R.id.gallery_custom_layout_carName);

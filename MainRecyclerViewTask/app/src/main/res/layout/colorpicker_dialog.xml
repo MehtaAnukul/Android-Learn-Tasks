@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/activity_colorpicker_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="100dp"
+        android:layout_margin="50dp">
+
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/activity_colorpicker_redSeekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="50"
+        android:layout_below="@id/activity_colorpicker_relativelayout"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"/>
+    <SeekBar
+        android:id="@+id/activity_colorpicker_greenSeekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="50"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/activity_colorpicker_redSeekbar"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+    <SeekBar
+        android:id="@+id/activity_colorpicker_blueSeekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="50"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/activity_colorpicker_greenSeekbar"/>
+    <SeekBar
+        android:id="@+id/activity_colorpicker_alphaSeekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="50"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/activity_colorpicker_blueSeekbar"/>
+
+    <Button
+        android:id="@+id/activity_colorpicker_okBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"/>
+</RelativeLayout>

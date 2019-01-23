@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:elevation="10dp"
+    android:elevation="5dp"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="3dp">
 
     <ImageView
         android:id="@+id/gallery_custom_layout_imgView"
         android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_height="170dp"
         android:scaleType="fitXY"
         android:src="@drawable/lamborghini_huracan" />
     <TextView
@@ -19,6 +19,6 @@
         android:text="@string/carName"
         android:textAppearance="?android:textAppearanceMedium"
         android:gravity="center"
-        android:padding="5dp"/>
+        android:padding="2dp"/>
 
 </LinearLayout>

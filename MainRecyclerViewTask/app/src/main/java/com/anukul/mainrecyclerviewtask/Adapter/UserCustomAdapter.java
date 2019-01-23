@@ -1,5 +1,6 @@
 package com.anukul.mainrecyclerviewtask.Adapter;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,12 +17,18 @@ import java.util.ArrayList;
 
 public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.UserCustomViewHolder> {
 
+    private Context context;
     private ArrayList<UserModel> userModelArrayList;
     private ItemClickListener itemClickListener;
+    private int evenViewColor;
+    private int oddViewColor;
 
-    public UserCustomAdapter(ArrayList<UserModel> userModelArrayList, ItemClickListener itemClickListener) {
+    public UserCustomAdapter(Context context, ArrayList<UserModel> userModelArrayList, ItemClickListener itemClickListener, int evenViewColor, int oddViewColor) {
+        this.context = context;
         this.userModelArrayList = userModelArrayList;
         this.itemClickListener = itemClickListener;
+        this.evenViewColor = evenViewColor;
+        this.oddViewColor = oddViewColor;
     }
 
     public class UserCustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -84,6 +91,12 @@ public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.Us
         UserModel userModel = userModelArrayList.get(position);
 
         holder.setData(userModel, position);
+
+        if(position % 2 == 0){
+            holder.itemView.setBackgroundColor(evenViewColor);
+        }else{
+            holder.itemView.setBackgroundColor(oddViewColor);
+        }
     }
 
     @Override
@@ -91,5 +104,11 @@ public class UserCustomAdapter extends RecyclerView.Adapter<UserCustomAdapter.Us
         return userModelArrayList.size();
     }
 
+    public void changeEvenItemBackgroundColor(int color){
+        evenViewColor = color;
+    }
+    public void changeOddItemBackgroundColor(int color){
+        oddViewColor = color;
+    }
 
 }
