@@ -1,5 +1,6 @@
 package com.anukul.travelstreamcardview;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -47,19 +48,19 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
     @Override
     public void onItemClick(TravelBeacheModel travelBeacheModel) {
-        final AppCompatDialog appCompatDialog = new AppCompatDialog(this,R.style.Theme_AppCompat_Light_Dialog_MinWidth);
-        appCompatDialog.setContentView(R.layout.display_image_custom_layout);
-        displayImg = appCompatDialog.findViewById(R.id.display_image_customLayout_image);
+        final Dialog dialog = new Dialog(this,R.style.Theme_AppCompat_Light_Dialog_MinWidth);
+        dialog.setContentView(R.layout.display_image_custom_layout);
+        dialog.setTitle(travelBeacheModel.getNameOfBeache());
+        displayImg = dialog.findViewById(R.id.display_image_customLayout_image);
         displayImg.setImageResource(travelBeacheModel.getTravelBeacheImages());
-        appCompatDialog.setTitle(travelBeacheModel.getNameOfBeache());
-        appCompatDialog.show();
-        appCompatDialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+        dialog.setCanceledOnTouchOutside(false);
 
-        final ImageView closeIcon = appCompatDialog.findViewById(R.id.display_image_customLayout_closeIcon);
+        final ImageView closeIcon = dialog.findViewById(R.id.display_image_customLayout_closeIcon);
         closeIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                appCompatDialog.dismiss();
+                dialog.dismiss();
             }
         });
         Toast.makeText(this, ""+travelBeacheModel.getNameOfBeache(), Toast.LENGTH_SHORT).show();
