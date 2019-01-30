@@ -66,14 +66,15 @@ public class InsertNotesDataActivity extends AppCompatActivity implements View.O
 
     private void addUpdateData() {
         final boolean status = intent.getBooleanExtra(AppConstant.KEY_CODE,false);
+        Log.e("status",""+status);
         if (status){
            // intent.putExtra(AppConstant.KEY_CODE,true);
             int position = intent.getIntExtra(AppConstant.KEY_UPDATE_POSITION,200);
             Log.e(TAG,"addUpdateData : "+position);
         }
-        intent.putExtra(AppConstant.KEY_title,title);
-        intent.putExtra(AppConstant.KEY_category,category);
-        intent.putExtra(AppConstant.KEY_dateils,details);
+        intent.putExtra(AppConstant.KEY_TITLE,title);
+        intent.putExtra(AppConstant.KEY_CATEGORY,category);
+        intent.putExtra(AppConstant.KEY_DATEILS,details);
 
         setResult(RESULT_OK,intent);
         finish();

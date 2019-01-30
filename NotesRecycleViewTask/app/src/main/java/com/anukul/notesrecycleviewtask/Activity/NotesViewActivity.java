@@ -75,9 +75,9 @@ public class NotesViewActivity extends AppCompatActivity implements View.OnClick
                 if (data != null) {
                     final boolean status = data.getBooleanExtra(AppConstant.KEY_CODE, false);
                     if (status) {
-                        final String title = data.getStringExtra(AppConstant.KEY_title);
-                        final String category = data.getStringExtra(AppConstant.KEY_category);
-                        final String details = data.getStringExtra(AppConstant.KEY_dateils);
+                        final String title = data.getStringExtra(AppConstant.KEY_TITLE);
+                        final String category = data.getStringExtra(AppConstant.KEY_CATEGORY);
+                        final String details = data.getStringExtra(AppConstant.KEY_DATEILS);
 
                         NotesModel notesModel = new NotesModel(title, category, details);
                         //int position = data.getIntExtra(AppConstant.KEY_UPDATE_POSITION,200);
@@ -88,9 +88,9 @@ public class NotesViewActivity extends AppCompatActivity implements View.OnClick
                         notesCustomAdapter.notifyDataSetChanged();
 
                     } else {
-                        final String title = data.getStringExtra(AppConstant.KEY_title);
-                        final String category = data.getStringExtra(AppConstant.KEY_category);
-                        final String details = data.getStringExtra(AppConstant.KEY_dateils);
+                        final String title = data.getStringExtra(AppConstant.KEY_TITLE);
+                        final String category = data.getStringExtra(AppConstant.KEY_CATEGORY);
+                        final String details = data.getStringExtra(AppConstant.KEY_DATEILS);
 
                         NotesModel notesModel = new NotesModel(title, category, details);
                         notesModelArrayList.add(notesModel);
@@ -128,6 +128,7 @@ public class NotesViewActivity extends AppCompatActivity implements View.OnClick
                 builder.setMessage("Are you sure ?");
                 builder.setCancelable(false);
 
+
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -143,13 +144,16 @@ public class NotesViewActivity extends AppCompatActivity implements View.OnClick
                         Toast.makeText(NotesViewActivity.this, "Notes Not Deleted", Toast.LENGTH_SHORT).show();
                     }
                 });
+                builder.show();
             }
 
             private void updateData(int position) {
                 Intent updateIntent = new Intent(NotesViewActivity.this, InsertNotesDataActivity.class);
                 updateIntent.putExtra(AppConstant.KEY_CODE, true);
                 updateIntent.putExtra(AppConstant.KEY_UPDATE_POSITION, position);
-                startActivityForResult(updateIntent, 200);
+                Log.e("UpdatePostion",""+position);
+                startActivityForResult(updateIntent, 100);
+
             }
         });
     }
