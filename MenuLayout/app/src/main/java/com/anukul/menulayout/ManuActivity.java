@@ -104,7 +104,7 @@ public class ManuActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case R.id.whatsapp_manu_newBroadcast:
                         Toast.makeText(ManuActivity.this,"New Broadcast",Toast.LENGTH_SHORT).show();
-                        break;
+                         break;
                     case R.id.whatsapp_manu_whatsAppWeb:
                         Toast.makeText(ManuActivity.this,"Whatsapp Web",Toast.LENGTH_SHORT).show();
                         break;
