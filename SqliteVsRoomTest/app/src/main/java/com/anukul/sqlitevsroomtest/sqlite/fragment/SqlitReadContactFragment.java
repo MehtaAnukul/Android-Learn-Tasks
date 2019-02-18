@@ -40,13 +40,6 @@ public class SqlitReadContactFragment extends Fragment implements View.OnClickLi
     private static ReadContactAdapter readContactAdapter;
 
 
-
-    private Random mRandom;
-    private int mInsertions;
-    private ContactDbHelper contactDbHelper;
-
-
-
     private FloatingActionButton floatingActionButton;
     private FloatingActionButton fFloatingActionButton;
     private FloatingActionButton lFloatingActionButton;

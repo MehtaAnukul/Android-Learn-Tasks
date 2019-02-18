@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -25,7 +26,6 @@ public class RoomActivity extends AppCompatActivity implements SearchView.OnQuer
     private Toolbar toolbar;
 
     private FragmentManager fragmentManager;
-    private RoomReadUserFragment roomReadUserFragment;
     public static MyAppDatabase myAppDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,10 @@ public class RoomActivity extends AppCompatActivity implements SearchView.OnQuer
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.appbar_menu,menu);
+
+        MenuItem menuItem = menu.findItem(R.id.appbar_menu_searchIcon);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setOnQueryTextListener(this);
         return true;
     }
 
@@ -107,8 +111,19 @@ public class RoomActivity extends AppCompatActivity implements SearchView.OnQuer
         String usertext = s.toLowerCase();
         ArrayList<UserModel> searchArraylist = new ArrayList<>();
 
-        
 
+        for (int i = 0; i < RoomReadUserFragment.getUserModelArrayList().size(); i++) {
+            if (RoomReadUserFragment.getUserModelArrayList().get(i).getName().toLowerCase().contains(usertext)
+                    || RoomReadUserFragment.getUserModelArrayList().get(i).getEmail().toLowerCase().contains(usertext)
+                    || RoomReadUserFragment.getUserModelArrayList().get(i).getPhoneNo().toLowerCase().contains(usertext)
+                    || RoomReadUserFragment.getUserModelArrayList().get(i).getLastName().toLowerCase().toLowerCase().contains(usertext)) {
+                searchArraylist.add(RoomReadUserFragment.getUserModelArrayList().get(i));
+            }
+
+        }
+        Log.e("DOST1", RoomReadUserFragment.getUserModelArrayList()+ "");
+        Log.e("DOST2", searchArraylist + "");
+        RoomReadUserFragment.getRoomReadUserAdapter().updateList(searchArraylist);
 
         return true;
     }

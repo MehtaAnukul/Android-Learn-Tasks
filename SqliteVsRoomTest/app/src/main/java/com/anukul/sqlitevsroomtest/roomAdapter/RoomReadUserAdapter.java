@@ -63,5 +63,9 @@ public class RoomReadUserAdapter extends RecyclerView.Adapter<RoomReadUserAdapte
         return userModelArrayList.size();
     }
 
-
+    public void updateList(ArrayList<UserModel> searchUserArraylist) {
+        userModelArrayList = new ArrayList<>();
+        userModelArrayList.addAll(searchUserArraylist);
+        notifyDataSetChanged();
+    }
 }
