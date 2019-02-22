@@ -130,7 +130,7 @@ public class SqlitReadContactFragment extends Fragment implements View.OnClickLi
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.list_sort:
-                if (fabExpanded == true) {
+                if (fabExpanded) {
                     closeSubMenusFab();
                 } else {
                     openSubMenusFab();

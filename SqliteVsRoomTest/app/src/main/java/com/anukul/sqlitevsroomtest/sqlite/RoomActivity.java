@@ -1,6 +1,8 @@
 package com.anukul.sqlitevsroomtest.sqlite;
 
+import android.app.ProgressDialog;
 import android.arch.persistence.room.Room;
+import android.os.AsyncTask;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -21,12 +23,23 @@ import com.anukul.sqlitevsroomtest.sqlite.activity.SqliteActivity;
 import com.anukul.sqlitevsroomtest.sqlite.fragment.SqlitReadContactFragment;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class RoomActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
     private Toolbar toolbar;
 
     private FragmentManager fragmentManager;
     public static MyAppDatabase myAppDatabase;
+
+    private Random mRandom;
+    private long start_time, end_time, total_time;
+    private ProgressDialog progressDialog;
+
+    String random[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
+            , "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x"
+            , "y", "z"};
+    String randomNumberArray[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    String randomComDomainArray[] = {"@gmail.com","@yahoo.in","@yahoo.com"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +51,32 @@ public class RoomActivity extends AppCompatActivity implements SearchView.OnQuer
         fragmentManager = getSupportFragmentManager();
         myAppDatabase = Room.databaseBuilder(getApplicationContext(), MyAppDatabase.class, "userdb").allowMainThreadQueries().build();
 
+        progressDialog = new ProgressDialog(RoomActivity.this);
+        mRandom = new Random();
 
         fragmentManager = getSupportFragmentManager();
+    }
+
+    public String randomSting(){
+     String randomName = "";
+     for(int i=0;i<6;i++){
+         randomName = randomName.concat(random[mRandom.nextInt(25)]);
+     }
+     return randomName;
+    }
+
+    public String randomNumber(){
+        String randomNamber = "";
+        for (int i=0;i<10;i++){
+            randomNamber = randomNamber.concat(randomNumberArray[mRandom.nextInt(9)]);
+        }
+        return randomNamber;
+    }
+    public String randomComDomain(){
+        String randomComDomain = "";
+        randomComDomain = randomComDomain.concat(randomComDomainArray[mRandom.nextInt(3)]);
+
+        return  randomComDomain;
     }
 
     @Override
@@ -56,25 +93,27 @@ public class RoomActivity extends AppCompatActivity implements SearchView.OnQuer
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.appbar_menu_insertData:
-               /* RoomFragment roomFragment = new RoomFragment();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.activity_room_fragment_container,roomFragment,RoomActivity.class.getSimpleName());
-                fragmentTransaction.commit();*/
-                RoomReadUserFragment roomReadUserFragmentt = new RoomReadUserFragment();
+
+               /* RoomReadUserFragment roomReadUserFragmentt = new RoomReadUserFragment();
 
                 RoomAddFragment roomAddFragment = new RoomAddFragment();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.activity_room_fragment_container,roomAddFragment,RoomActivity.class.getSimpleName());
                 fragmentTransaction.hide(roomReadUserFragmentt);
-                fragmentTransaction.commit();
+                fragmentTransaction.commit();*/
+                MyAsynctask myAsynctask = new MyAsynctask();
+                myAsynctask.execute();
                 break;
 
             case R.id.appbar_menu_ViewData:
+                progressDialog.setMessage("Please wait..");
+                progressDialog.show();
                 RoomAddFragment roomAddFragmentt = new RoomAddFragment();
 
                 RoomReadUserFragment roomReadUserFragment = new RoomReadUserFragment();
                 FragmentTransaction fragmentTransaction1 = fragmentManager.beginTransaction();
                 fragmentTransaction1.replace(R.id.activity_room_fragment_container,roomReadUserFragment,RoomActivity.class.getSimpleName());
+                progressDialog.dismiss();
                 fragmentTransaction1.hide(roomAddFragmentt);
                 fragmentTransaction1.commit();
                 break;
@@ -126,5 +165,43 @@ public class RoomActivity extends AppCompatActivity implements SearchView.OnQuer
         RoomReadUserFragment.getRoomReadUserAdapter().updateList(searchArraylist);
 
         return true;
+    }
+
+
+    public class MyAsynctask extends AsyncTask<Void,Void,Void>{
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            start_time = System.currentTimeMillis();
+            for (int i = 0; i < 1000; i++) {
+                UserModel userModel = new UserModel();
+                // userModel.setId(id + i);
+                userModel.setName(randomSting());
+                userModel.setLastName(randomSting());
+                userModel.setPhoneNo(randomNumber());
+                userModel.setEmail(randomSting().concat(randomComDomain()));
+                RoomActivity.myAppDatabase.mydataAccessObject().addUser(userModel);
+            }
+            progressDialog.dismiss();
+            end_time = System.currentTimeMillis();
+            total_time = end_time - start_time;
+
+            return null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog.setMessage("Please wait Data inserted..");
+            progressDialog.show();
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            progressDialog.dismiss();
+            Toast.makeText(RoomActivity.this, total_time + " mili seconds", Toast.LENGTH_SHORT).show();
+            Toast.makeText(RoomActivity.this, "Insert Successfully", Toast.LENGTH_SHORT).show();
+            super.onPostExecute(aVoid);
+        }
     }
 }

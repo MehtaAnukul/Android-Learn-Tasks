@@ -4,6 +4,7 @@ package com.anukul.sqlitevsroomtest.sqlite.activity;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -32,12 +33,14 @@ public class SqliteActivity extends AppCompatActivity implements SearchView.OnQu
     private Random mRandom;
     private ContactDbHelper contactDbHelper;
     private long start_time, end_time, total_time;
-
     private ProgressDialog progressDialog;
+
     String random[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
             , "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x"
             , "y", "z"};
     String randomNumberArray[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+
+    String randomComDomainArray[] = {"@gmail.com","@yahoo.in","@yahoo.com"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,26 @@ public class SqliteActivity extends AppCompatActivity implements SearchView.OnQu
         fragmentManager = getSupportFragmentManager();
     }
 
+    public String randomSting() {
+        String randomName = "";
+        for (int i = 0; i < 6; i++)
+            randomName = randomName.concat(random[mRandom.nextInt(25)]);
+        return randomName;
+    }
+    public String randomNumber() {
+        String randomNumber = "";
+        for (int i = 0; i < 10; i++) {
+            randomNumber = randomNumber.concat(randomNumberArray[mRandom.nextInt(9)]);
+        }
+        return randomNumber;
+    }
+    public String randomComDomain(){
+        String randomComDomain = "";
+            randomComDomain = randomComDomain.concat(randomComDomainArray[mRandom.nextInt(3)]);
+
+        return  randomComDomain;
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.appbar_menu, menu);
@@ -62,46 +85,13 @@ public class SqliteActivity extends AppCompatActivity implements SearchView.OnQu
         searchView.setOnQueryTextListener(this);
         return true;
     }
-
-    public String randomSting() {
-        String randomName = "";
-        for (int i = 0; i < 6; i++)
-            randomName = randomName.concat(random[mRandom.nextInt(25)]);
-        return randomName;
-    }
-
-    public String randomNumber() {
-        String randomNumber = "";
-        for (int i = 0; i < 10; i++) {
-            randomNumber = randomNumber.concat(randomNumberArray[mRandom.nextInt(9)]);
-        }
-        return randomNumber;
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
             case R.id.appbar_menu_insertData:
-
-                contactDbHelper = new ContactDbHelper(getApplicationContext());
-                SQLiteDatabase sqLiteDatabase = contactDbHelper.getWritableDatabase();
-
-                ContentValues values = new ContentValues();
-                start_time = System.currentTimeMillis();
-                progressDialog.setMessage("Please wait Data inserted..");
-                for (int i = 0; i < 1000; i++) {
-                    progressDialog.show();
-                    values.put(ContactDbConstant.CONTACT_COLUMN_NAME, randomSting());
-                    values.put(ContactDbConstant.CONTACT_COLUMN_LASTNAME, randomSting());
-                    values.put(ContactDbConstant.CONTACT_COLUMN_PHONE_NO, randomNumber());
-                    values.put(ContactDbConstant.CONTACT_COLUMN_EMAIL, randomSting().concat("@gmail.com"));
-                    sqLiteDatabase.insert(ContactDbConstant.CONTACT_TABALE_NAME, null, values);
-                }
-                progressDialog.dismiss();
-                end_time = System.currentTimeMillis();
-                total_time = end_time - start_time;
-                Toast.makeText(this, total_time + " mili seconds", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "insert success", Toast.LENGTH_SHORT).show();
+                MyAsynctask myAsynctask = new MyAsynctask();
+                myAsynctask.execute();
                 break;
             case R.id.appbar_menu_ViewData:
                 progressDialog.setMessage("Please wait..");
@@ -159,5 +149,45 @@ public class SqliteActivity extends AppCompatActivity implements SearchView.OnQu
         Log.e("DOST2", searchArrayList + "");
         SqlitReadContactFragment.getReadContactAdapter().updateList(searchArrayList);
         return true;
+    }
+
+    public class MyAsynctask extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            contactDbHelper = new ContactDbHelper(getApplicationContext());
+            SQLiteDatabase sqLiteDatabase = contactDbHelper.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+            start_time = System.currentTimeMillis();
+
+            for (int i = 0; i < 1000; i++) {
+                values.put(ContactDbConstant.CONTACT_COLUMN_NAME, randomSting());
+                values.put(ContactDbConstant.CONTACT_COLUMN_LASTNAME, randomSting());
+                values.put(ContactDbConstant.CONTACT_COLUMN_PHONE_NO, randomNumber());
+                values.put(ContactDbConstant.CONTACT_COLUMN_EMAIL, randomSting().concat(randomComDomain()));
+                sqLiteDatabase.insert(ContactDbConstant.CONTACT_TABALE_NAME, null, values);
+            }
+            progressDialog.dismiss();
+            end_time = System.currentTimeMillis();
+            total_time = end_time - start_time;
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            progressDialog.dismiss();
+            Toast.makeText(SqliteActivity.this, total_time + " mili seconds", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SqliteActivity.this, "insert success", Toast.LENGTH_SHORT).show();
+
+        }
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog.setMessage("Please wait Data inserted..");
+            progressDialog.show();
+            super.onPreExecute();
+        }
     }
 }
