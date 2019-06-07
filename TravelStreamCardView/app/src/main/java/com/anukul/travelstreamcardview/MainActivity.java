@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
         customRecyclerView = findViewById(R.id.activity_main_customRecyclerView);
 
-
-
         travelBeacheModelArrayList = new ArrayList<>();
         travelBeacheModelArrayList.add(new TravelBeacheModel("Bondi Beach", "Number 10", "Bondi Beach", "Sydney NSW",R.drawable.bondi_beach10));
         travelBeacheModelArrayList.add(new TravelBeacheModel("Lizard Island QLD", "Number 9", "Lizard Island QLD", "Near Cairns,For North Queensland",R.drawable.lizard_island9));
